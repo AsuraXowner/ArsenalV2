@@ -134,7 +134,7 @@ local UICorner_27 = Instance.new("UICorner")
 
 TestGui.Name = "TestGui"
 TestGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-TestGui.Enabled = false
+TestGui.Enabled = true
 TestGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 MainBackgroundFrame.Name = "MainBackgroundFrame"
