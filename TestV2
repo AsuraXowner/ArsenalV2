@@ -1435,20 +1435,18 @@ local inputAimAssistActive = true
 
 
 userInputService.InputBegan:Connect(function(input, gameProccesedEvent)
-if input.KeyCode == inputMenu then
-	if inputMenuActive==true then
-		if MenuHidden == false then
-			MenuHidden=true
-			MainGui.Visible = true
-		else
-			MenuHidden=false
-			MainGui.Visible = false
+	if userInputService:GetFocusedTextBox() ~= nil then return end
+	if input.KeyCode == inputMenu then
+		if inputMenuActive==true then
+			if MenuHidden == false then
+				MenuHidden=true
+				MainGui.Visible = true
+			else
+				MenuHidden=false
+				MainGui.Visible = false
 			end
 		end
-	end
-end)
-userInputService.InputBegan:Connect(function(input)
-	if input.KeyCode == inputAimbot then
+	elseif input.KeyCode == inputAimbot then
 		if inputAimbotActive == true then
 			if AimBotting == true then
 				MainGui.MainMiddleButtons.Section1Gui.Button1Background.Button1.ImageButton1:TweenPosition(--Timer
@@ -1468,7 +1466,7 @@ userInputService.InputBegan:Connect(function(input)
 				)
 				game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section1Gui.Button1Background.Button1.ImageButton2,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(126, 112, 167)}):Play()
 				AimBotting=false
-			else
+				else
 				MainGui.MainMiddleButtons.Section1Gui.Button1Background.Button1.ImageButton1:TweenPosition(--Timer
 					UDim2.new(0, 2,0.074, 0),
 					"Out",
@@ -1488,12 +1486,7 @@ userInputService.InputBegan:Connect(function(input)
 				AimBotting=true
 			end
 		end
-	end
-
-	return
-end)
-userInputService.InputBegan:Connect(function(input)
-	if input.KeyCode == inputAimAssist then
+	elseif input.KeyCode == inputAimAssist then
 		if inputAimAssistActive == true then
 			if Peekassist == true then
 				MainGui.MainMiddleButtons.Section1Gui.Button2Background.Button1.ImageButton1:TweenPosition(--Timer
@@ -1534,8 +1527,6 @@ userInputService.InputBegan:Connect(function(input)
 			end
 		end
 	end
-
-	return
 end)
 
 --AIMBOT SCRIPT--
@@ -1762,7 +1753,7 @@ MainGui.MainMiddleButtons.Section2Gui.Button6Background.Button1.ImageButton2.Mou
 
 	local function ESP(plr)
 		task.spawn(function()
-			for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+			for i,v in workspace:GetChildren() do
 				if v.Name == plr.Name..'_ESP' then
 					v:Destroy()
 				end
@@ -1772,7 +1763,7 @@ MainGui.MainMiddleButtons.Section2Gui.Button6Background.Button1.ImageButton2.Mou
 				if plr.Character and plr.Name ~= game:GetService("Players").LocalPlayer.Name and not game:GetService("ReplicatedStorage"):FindFirstChild(plr.Name..'_ESP') then
 					local ESPholder = Instance.new("Folder")
 					ESPholder.Name = plr.Name..'_ESP'
-					ESPholder.Parent = game:GetService("Workspace")
+					ESPholder.Parent = workspace
 					repeat task.wait(1) until plr.Character and getRoot(plr.Character) and plr.Character:FindFirstChildOfClass("Humanoid")
 					for b,n in pairs (plr.Character:GetChildren()) do
 						if (n:IsA("BasePart")) then
@@ -1828,7 +1819,7 @@ MainGui.MainMiddleButtons.Section2Gui.Button6Background.Button1.ImageButton2.Mou
 							teamChange:Disconnect()
 						end)
 						local function espLoop()
-							if game:GetService("Workspace"):FindFirstChild(plr.Name..'_ESP') then
+							if workspace:FindFirstChild(plr.Name..'_ESP') then
 								if plr.Character and getRoot(plr.Character) and plr.Character:FindFirstChildOfClass("Humanoid") and game:GetService("Players").LocalPlayer.Character and getRoot(game:GetService("Players").LocalPlayer.Character) and game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid") then
 									local pos = math.floor((getRoot(game:GetService("Players").LocalPlayer.Character).Position - getRoot(plr.Character).Position).magnitude)
 									TextLabel.Text = 'Name: '..plr.Name..' | Health: '..round(plr.Character:FindFirstChildOfClass('Humanoid').Health, 1)..' | Studs: '..pos
@@ -2247,13 +2238,13 @@ MainGui.SideGui.Buttons.SideButton2.Button2Side.MouseEnter:Connect(function()
 	end
 end)
 MainGui.SideGui.Buttons.SideButton2.Button2Side.MouseLeave:Connect(function()
-		if PeakAssistFrame==false then
-			game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton2.Button2Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageTransparency=0.6}):Play()
-			game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton2,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency=0.6}):Play()
-		else
-			game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton2.Button2Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageTransparency=0}):Play()
-			game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton2,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency=0}):Play()
-		end
+	if PeakAssistFrame==false then
+		game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton2.Button2Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageTransparency=0.6}):Play()
+		game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton2,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency=0.6}):Play()
+	else
+		game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton2.Button2Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageTransparency=0}):Play()
+		game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton2,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency=0}):Play()
+	end
 end)
 --[[MainGui.SideGui.Buttons.SideButton1.Button1Side.MouseEnter:Connect(function()
 	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton1.Button1Side,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{ImageTransparency=0}):Play()
