@@ -1,5 +1,70 @@
 -- AsuraX LuaX
--- Version: 0.1
+-- Version: 0.2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2653,6 +2718,7 @@ TestGui.Section3Gui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Section3Gui.BackgroundTransparency = 1.000
 TestGui.Section3Gui.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TestGui.Section3Gui.BorderSizePixel = 0
+TestGui.Section3Gui.Visible = false
 TestGui.Section3Gui.Position = UDim2.new(-0.00165562914, 0, 0.00251256279, 0)
 TestGui.Section3Gui.Size = UDim2.new(0.0130000003, 0, 0.0149999997, 0)
 
@@ -4026,9 +4092,9 @@ function CameraGetClosestToMouse(Fov)
 					local new_magnitude = (screen_pos_2D - mouseLocation(UIS)).Magnitude
 					if on_screen and new_magnitude < AimFov and isVisible(v.Character[Configs.Aimbot.AimPart].Position, v.Character.Head.Parent) then
 						AimFov = new_magnitude
-						targetPos = v-- Made By Mick Gordon
+						targetPos = v
 					end
-				end-- Made By Mick Gordon
+				end
 			else
 				if v.Character and v.Character:FindFirstChild(Configs.Aimbot.AimPart) and v.Character.Humanoid and v.Character.Humanoid.Health > 0 then
 					local screen_pos, on_screen = WorldToViewportPoint(CurrentCam, v.Character[Configs.Aimbot.AimPart].Position)
@@ -4054,7 +4120,7 @@ local function aimAt(pos, smooth)
 		if Distance > 100  then
 			local distChangeBig = Distance / 10
 			LookAt = CurrentCam.CFrame:PointToWorldSpace(Vector3.new(0,0,-smooth * distChangeBig)):Lerp(AimPart.Position,.01) -- No one esle do camera smoothing ? tf
-		else-- Made By Mick Gordon
+		else
 			local distChangeSmall = Distance / 10
 			LookAt = CurrentCam.CFrame:PointToWorldSpace(Vector3.new(0,0,-smooth * distChangeSmall)):Lerp(AimPart.Position,.01) -- No one esle do camera smoothing ? tf
 		end
@@ -4484,7 +4550,7 @@ if input.KeyCode == inputMenu then
 	end
 end)
 userInputService.InputBegan:Connect(function(input)
-	if input.KeyCode == Configs.Aimbot.KeybindActivate then
+	if input.KeyCode == Enum.KeyCode.R then
 		if Configs.Aimbot.KeybindEnabled == true then
 			if userInputService:GetFocusedTextBox() ~= nil then return end
 			if Configs.Aimbot.Enabled == true then
@@ -4787,7 +4853,7 @@ local function onInputBegan(input)
 		if Configs.AntiLock.Enabled then
 		while Configs.AntiLock.Enabled do
 				adjustVelocity()
-				task.wait()
+				task.wait(0.01)
 			end
 		else
 			game.Players.LocalPlayer.Character.Humanoid.HipHeight = hip
@@ -4977,7 +5043,7 @@ MainGui.MainMiddleButtons.Section2Gui.Button6Background.Button1.ImageButton2.Mou
 					v:Destroy()
 				end
 			end
-			task.wait()
+			task.wait(0.01)
 			if Configs.ESP.Enabled==true then
 				if plr.Character and plr.Name ~= game:GetService("Players").LocalPlayer.Name and not game:GetService("ReplicatedStorage"):FindFirstChild(plr.Name..'_ESP') then
 					local ESPholder = Instance.new("Folder")
@@ -5293,7 +5359,7 @@ MainGui.DownGui.ButtonsListOfSettings.Button1Settings4.Button1.ImageButton2.Mous
 		false
 	)
 	game:GetService("TweenService"):Create(MainGui.DownGui.ButtonsListOfSettings.Button1Settings4.Button1.ImageButton1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(0, 0, 0)}):Play()
-	Configs.Aimbot.Enabled=true
+	Configs.Aimbot.KeybindEnabled=true
 end)
 MainGui.DownGui.ButtonsListOfSettings.Button1Settings4.Button1.ImageButton1.MouseButton1Click:Connect(function()
 	MainGui.DownGui.ButtonsListOfSettings.Button1Settings4.Button1.ImageButton1:TweenPosition(--Timer
@@ -5312,7 +5378,7 @@ MainGui.DownGui.ButtonsListOfSettings.Button1Settings4.Button1.ImageButton1.Mous
 		false
 	)
 	game:GetService("TweenService"):Create(MainGui.DownGui.ButtonsListOfSettings.Button1Settings4.Button1.ImageButton2,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(126, 112, 167)}):Play()
-	Configs.Aimbot.Enabled=false
+	Configs.Aimbot.KeybindEnabled=false
 end)
 MainGui.DownGui.ButtonsListOfSettings.Button1Settings3.Button1.ImageButton2.MouseButton1Click:Connect(function()
 	MainGui.DownGui.ButtonsListOfSettings.Button1Settings3.Button1.ImageButton1:TweenPosition(--Timer
@@ -5354,7 +5420,7 @@ MainGui.DownGui.ButtonsListOfSettings.Button2Settings1.Button1.ImageButton2.Mous
 		false
 	)
 	game:GetService("TweenService"):Create(MainGui.DownGui.ButtonsListOfSettings.Button2Settings1.Button1.ImageButton1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(0, 0, 0)}):Play()
-	Configs.Peakassist.Enabled = true
+	Configs.Peakassist.KeybindEnabled = true
 end)
 MainGui.DownGui.ButtonsListOfSettings.Button2Settings1.Button1.ImageButton1.MouseButton1Click:Connect(function()
 	MainGui.DownGui.ButtonsListOfSettings.Button2Settings1.Button1.ImageButton1:TweenPosition(--Timer
@@ -5373,7 +5439,7 @@ MainGui.DownGui.ButtonsListOfSettings.Button2Settings1.Button1.ImageButton1.Mous
 		false
 	)
 	game:GetService("TweenService"):Create(MainGui.DownGui.ButtonsListOfSettings.Button2Settings1.Button1.ImageButton2,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(126, 112, 167)}):Play()
-	Configs.Peakassist.Enabled = false
+	Configs.Peakassist.KeybindEnabled = false
 end)
 
 MainGui.DownGui.ButtonsListOfSettings.Button3Settings3.Button1.ImageButton2.MouseButton1Click:Connect(function()
@@ -6280,7 +6346,7 @@ local function LDTZWMY_fake_script() -- Slider3.Script1
 		SliderActive = true
 		while SliderActive do
 			UpdateSlider()
-			task.wait()
+			task.wait(0.01)
 		end
 	end
 
