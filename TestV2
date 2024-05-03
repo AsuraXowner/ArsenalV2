@@ -1,373 +1,381 @@
 -- AsuraX LuaX
--- Version: 0.2
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-- Version: 0.4
 
 -- Instances:
+
+---[[   █████   ███████╗  ██╗   ██╗ ███████╗   █████╗  ██╗  ██╗ ]]---
+---[[ ╔██╗nn██  ██╔════╝  ██║   ██║ ██╔════╝  ██╔══██╗ ╚██╗██╔╝ ]]---
+---[[ ║███████  ███████╗  ██║   ██║ ███████╗  ███████║  ╚███╔╝  ]]---
+---[[ ╚██╗  ██  ╚════██║  ██║   ██║ ╚════██║  ██╔══██║  ██╔██╗  ]]---
+---[[ ╚██║  ██  ███████║  ╚██████╔╝ ███████║  ██║  ██║ ██╔╝ ██╗ ]]---
+---[[    ╚═══╝  ╚══════╝   ╚═════╝  ╚══════╝    ╚════╝ ╚═╝  ╚═╝ ]]---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 local TestGui = {
 	TestGui = Instance.new("ScreenGui"),
@@ -546,8 +554,7 @@ local TestGui = {
 	UICorner_32 = Instance.new("UICorner"),
 	Text1_19 = Instance.new("TextButton"),
 	UICorner_33 = Instance.new("UICorner"),
-	Section2Gui = Instance.new("Frame"),
-	Button3Background = Instance.new("Frame"),
+	Button16Background = Instance.new("Frame"),
 	Text2_20 = Instance.new("TextLabel"),
 	Button1_20 = Instance.new("Frame"),
 	ImageButton1_18 = Instance.new("ImageButton"),
@@ -555,7 +562,8 @@ local TestGui = {
 	UICorner_34 = Instance.new("UICorner"),
 	Text1_20 = Instance.new("TextButton"),
 	UICorner_35 = Instance.new("UICorner"),
-	Button4Background = Instance.new("Frame"),
+	Section2Gui = Instance.new("Frame"),
+	Button3Background = Instance.new("Frame"),
 	Text2_21 = Instance.new("TextLabel"),
 	Button1_21 = Instance.new("Frame"),
 	ImageButton1_19 = Instance.new("ImageButton"),
@@ -563,7 +571,7 @@ local TestGui = {
 	UICorner_36 = Instance.new("UICorner"),
 	Text1_21 = Instance.new("TextButton"),
 	UICorner_37 = Instance.new("UICorner"),
-	Button5Background = Instance.new("Frame"),
+	Button4Background = Instance.new("Frame"),
 	Text2_22 = Instance.new("TextLabel"),
 	Button1_22 = Instance.new("Frame"),
 	ImageButton1_20 = Instance.new("ImageButton"),
@@ -571,7 +579,7 @@ local TestGui = {
 	UICorner_38 = Instance.new("UICorner"),
 	Text1_22 = Instance.new("TextButton"),
 	UICorner_39 = Instance.new("UICorner"),
-	Button6Background = Instance.new("Frame"),
+	Button5Background = Instance.new("Frame"),
 	Text2_23 = Instance.new("TextLabel"),
 	Button1_23 = Instance.new("Frame"),
 	ImageButton1_21 = Instance.new("ImageButton"),
@@ -579,8 +587,7 @@ local TestGui = {
 	UICorner_40 = Instance.new("UICorner"),
 	Text1_23 = Instance.new("TextButton"),
 	UICorner_41 = Instance.new("UICorner"),
-	Section3Gui = Instance.new("Frame"),
-	Button7Background = Instance.new("Frame"),
+	Button6Background = Instance.new("Frame"),
 	Text2_24 = Instance.new("TextLabel"),
 	Button1_24 = Instance.new("Frame"),
 	ImageButton1_22 = Instance.new("ImageButton"),
@@ -588,97 +595,131 @@ local TestGui = {
 	UICorner_42 = Instance.new("UICorner"),
 	Text1_24 = Instance.new("TextButton"),
 	UICorner_43 = Instance.new("UICorner"),
-	Button8Background = Instance.new("Frame"),
+	Button14Background = Instance.new("Frame"),
 	Text2_25 = Instance.new("TextLabel"),
+	Text1_25 = Instance.new("TextButton"),
+	UICorner_44 = Instance.new("UICorner"),
+	Button15Background = Instance.new("Frame"),
+	Text2_26 = Instance.new("TextLabel"),
 	Button1_25 = Instance.new("Frame"),
 	ImageButton1_23 = Instance.new("ImageButton"),
 	ImageButton2_23 = Instance.new("ImageButton"),
-	UICorner_44 = Instance.new("UICorner"),
-	Text1_25 = Instance.new("TextButton"),
 	UICorner_45 = Instance.new("UICorner"),
-	Button9Background = Instance.new("Frame"),
-	Text2_26 = Instance.new("TextLabel"),
+	Text1_26 = Instance.new("TextButton"),
+	UICorner_46 = Instance.new("UICorner"),
+	Section3Gui = Instance.new("Frame"),
+	Button7Background = Instance.new("Frame"),
+	Text2_27 = Instance.new("TextLabel"),
 	Button1_26 = Instance.new("Frame"),
 	ImageButton1_24 = Instance.new("ImageButton"),
 	ImageButton2_24 = Instance.new("ImageButton"),
-	UICorner_46 = Instance.new("UICorner"),
-	Text1_26 = Instance.new("TextButton"),
 	UICorner_47 = Instance.new("UICorner"),
-	Button10Background = Instance.new("Frame"),
-	Text2_27 = Instance.new("TextLabel"),
+	Text1_27 = Instance.new("TextButton"),
+	UICorner_48 = Instance.new("UICorner"),
+	Button8Background = Instance.new("Frame"),
+	Text2_28 = Instance.new("TextLabel"),
 	Button1_27 = Instance.new("Frame"),
 	ImageButton1_25 = Instance.new("ImageButton"),
 	ImageButton2_25 = Instance.new("ImageButton"),
-	UICorner_48 = Instance.new("UICorner"),
-	Text1_27 = Instance.new("TextButton"),
 	UICorner_49 = Instance.new("UICorner"),
-	Button11Background = Instance.new("Frame"),
-	Text2_28 = Instance.new("TextLabel"),
+	Text1_28 = Instance.new("TextButton"),
+	UICorner_50 = Instance.new("UICorner"),
+	Button9Background = Instance.new("Frame"),
+	Text2_29 = Instance.new("TextLabel"),
 	Button1_28 = Instance.new("Frame"),
 	ImageButton1_26 = Instance.new("ImageButton"),
 	ImageButton2_26 = Instance.new("ImageButton"),
-	UICorner_50 = Instance.new("UICorner"),
-	Text1_28 = Instance.new("TextButton"),
 	UICorner_51 = Instance.new("UICorner"),
+	Text1_29 = Instance.new("TextButton"),
+	UICorner_52 = Instance.new("UICorner"),
+	Button10Background = Instance.new("Frame"),
+	Text2_30 = Instance.new("TextLabel"),
+	Button1_29 = Instance.new("Frame"),
+	ImageButton1_27 = Instance.new("ImageButton"),
+	ImageButton2_27 = Instance.new("ImageButton"),
+	UICorner_53 = Instance.new("UICorner"),
+	Text1_30 = Instance.new("TextButton"),
+	UICorner_54 = Instance.new("UICorner"),
+	Button11Background = Instance.new("Frame"),
+	Text2_31 = Instance.new("TextLabel"),
+	Button1_30 = Instance.new("Frame"),
+	ImageButton1_28 = Instance.new("ImageButton"),
+	ImageButton2_28 = Instance.new("ImageButton"),
+	UICorner_55 = Instance.new("UICorner"),
+	Text1_31 = Instance.new("TextButton"),
+	UICorner_56 = Instance.new("UICorner"),
+	Section4Gui = Instance.new("Frame"),
+	Button12Background = Instance.new("Frame"),
+	Text2_32 = Instance.new("TextLabel"),
+	Button1_31 = Instance.new("Frame"),
+	ImageButton1_29 = Instance.new("ImageButton"),
+	ImageButton2_29 = Instance.new("ImageButton"),
+	UICorner_57 = Instance.new("UICorner"),
+	Text1_32 = Instance.new("TextButton"),
+	UICorner_58 = Instance.new("UICorner"),
+	Button13Background = Instance.new("Frame"),
+	Text2_33 = Instance.new("TextLabel"),
+	Text1_33 = Instance.new("TextButton"),
+	UICorner_59 = Instance.new("UICorner"),
 	ColorPicker = Instance.new("Folder"),
 	ColorPicker_2 = Instance.new("Frame"),
 	UIPadding = Instance.new("UIPadding"),
-	UICorner_52 = Instance.new("UICorner"),
+	UICorner_60 = Instance.new("UICorner"),
 	UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint"),
 	Sliders = Instance.new("Folder"),
 	sliders = Instance.new("Frame"),
 	bottomSlider = Instance.new("TextButton"),
 	Picker = Instance.new("Frame"),
 	bar = Instance.new("Frame"),
-	UICorner_53 = Instance.new("UICorner"),
+	UICorner_61 = Instance.new("UICorner"),
 	gradient = Instance.new("Frame"),
 	UIGradient_4 = Instance.new("UIGradient"),
-	UICorner_54 = Instance.new("UICorner"),
-	UICorner_55 = Instance.new("UICorner"),
+	UICorner_62 = Instance.new("UICorner"),
+	UICorner_63 = Instance.new("UICorner"),
 	topSlider = Instance.new("TextButton"),
 	Picker_2 = Instance.new("Frame"),
 	bar_2 = Instance.new("Frame"),
-	UICorner_56 = Instance.new("UICorner"),
-	UICorner_57 = Instance.new("UICorner"),
+	UICorner_64 = Instance.new("UICorner"),
+	UICorner_65 = Instance.new("UICorner"),
 	gradient_2 = Instance.new("Frame"),
 	UIGradient_5 = Instance.new("UIGradient"),
-	UICorner_58 = Instance.new("UICorner"),
-	UICorner_59 = Instance.new("UICorner"),
+	UICorner_66 = Instance.new("UICorner"),
+	UICorner_67 = Instance.new("UICorner"),
 	inputs = Instance.new("Frame"),
 	HEX = Instance.new("Frame"),
 	UIListLayout = Instance.new("UIListLayout"),
 	UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint"),
-	UICorner_60 = Instance.new("UICorner"),
+	UICorner_68 = Instance.new("UICorner"),
 	TextLabel_2 = Instance.new("TextLabel"),
 	TextBox = Instance.new("Frame"),
-	UICorner_61 = Instance.new("UICorner"),
+	UICorner_69 = Instance.new("UICorner"),
 	input = Instance.new("TextBox"),
 	RGB = Instance.new("Frame"),
 	R = Instance.new("Frame"),
 	TextLabel_3 = Instance.new("TextLabel"),
 	TextBox_2 = Instance.new("Frame"),
-	UICorner_62 = Instance.new("UICorner"),
+	UICorner_70 = Instance.new("UICorner"),
 	input_2 = Instance.new("TextBox"),
-	UICorner_63 = Instance.new("UICorner"),
+	UICorner_71 = Instance.new("UICorner"),
 	UIListLayout_2 = Instance.new("UIListLayout"),
 	G = Instance.new("Frame"),
 	TextLabel_4 = Instance.new("TextLabel"),
 	TextBox_3 = Instance.new("Frame"),
-	UICorner_64 = Instance.new("UICorner"),
+	UICorner_72 = Instance.new("UICorner"),
 	input_3 = Instance.new("TextBox"),
-	UICorner_65 = Instance.new("UICorner"),
+	UICorner_73 = Instance.new("UICorner"),
 	B = Instance.new("Frame"),
 	TextLabel_5 = Instance.new("TextLabel"),
 	TextBox_4 = Instance.new("Frame"),
-	UICorner_66 = Instance.new("UICorner"),
+	UICorner_74 = Instance.new("UICorner"),
 	input_4 = Instance.new("TextBox"),
-	UICorner_67 = Instance.new("UICorner"),
+	UICorner_75 = Instance.new("UICorner"),
 	UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint"),
 	UIListLayout_3 = Instance.new("UIListLayout"),
 	preview = Instance.new("Frame"),
 	UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint"),
 	pre = Instance.new("Frame"),
-	UICorner_68 = Instance.new("UICorner"),
+	UICorner_76 = Instance.new("UICorner"),
 	UIPadding_2 = Instance.new("UIPadding"),
 	Instances = Instance.new("Folder"),
 	ButtonsSettings1Value = Instance.new("NumberValue"),
@@ -697,6 +738,18 @@ local TestGui = {
 	ButtonsSettings4TextLabel = Instance.new("TextLabel"),
 	ButtonsSettings4TextValue = Instance.new("NumberValue"),
 	ButtonsSettings4TextLabel1 = Instance.new("TextLabel"),
+	ButtonsSettings5Value = Instance.new("NumberValue"),
+	ButtonsSettings5TextLabel = Instance.new("TextLabel"),
+	ButtonsSettings5TextValue = Instance.new("NumberValue"),
+	ButtonsSettings5TextLabel1 = Instance.new("TextLabel"),
+	ButtonsSettings6Value = Instance.new("NumberValue"),
+	ButtonsSettings6TextLabel = Instance.new("TextLabel"),
+	ButtonsSettings6TextValue = Instance.new("NumberValue"),
+	ButtonsSettings6TextLabel1 = Instance.new("TextLabel"),
+	ButtonsSettings7Value = Instance.new("NumberValue"),
+	ButtonsSettings7TextLabel = Instance.new("TextLabel"),
+	ButtonsSettings7TextValue = Instance.new("NumberValue"),
+	ButtonsSettings7TextLabel1 = Instance.new("TextLabel"),
 }
 
 --Properties:
@@ -1635,7 +1688,7 @@ TestGui.Button3Settings3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TestGui.Button3Settings3.BorderSizePixel = 0
 TestGui.Button3Settings3.Position = UDim2.new(0.503311276, 0, 0.0481991507, 0)
 TestGui.Button3Settings3.Size = UDim2.new(0, 138, 0, 41)
-TestGui.Button3Settings3.Visible = true
+TestGui.Button3Settings3.Visible = false
 
 TestGui.Text2_11.Name = "Text2"
 TestGui.Text2_11.Parent = TestGui.Button3Settings3
@@ -1707,7 +1760,7 @@ TestGui.Button3Settings4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TestGui.Button3Settings4.BorderSizePixel = 0
 TestGui.Button3Settings4.Position = UDim2.new(0.0115894042, 0, 0.395656794, 0)
 TestGui.Button3Settings4.Size = UDim2.new(0, 138, 0, 41)
-TestGui.Button3Settings4.Visible = true
+TestGui.Button3Settings4.Visible = false
 
 TestGui.Text2_12.Name = "Text2"
 TestGui.Text2_12.Parent = TestGui.Button3Settings4
@@ -1923,7 +1976,7 @@ TestGui.Button1Settings5.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TestGui.Button1Settings5.BorderSizePixel = 0
 TestGui.Button1Settings5.Position = UDim2.new(0.502980113, 0, 0.078113623, 0)
 TestGui.Button1Settings5.Size = UDim2.new(0, 180, 0, 54)
-TestGui.Button1Settings5.Visible = true
+TestGui.Button1Settings5.Visible = false
 
 TestGui.Slider1.Name = "Slider1"
 TestGui.Slider1.Parent = TestGui.Button1Settings5
@@ -1966,7 +2019,7 @@ TestGui.Numbers.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Numbers.BackgroundTransparency = 1.000
 TestGui.Numbers.BorderColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Numbers.BorderSizePixel = 0
-TestGui.Numbers.Position = UDim2.new(0.79130435, 0, 0, 0)
+TestGui.Numbers.Position = UDim2.new(0.730193079, 0, -0.0185185187, 0)
 TestGui.Numbers.Size = UDim2.new(0, 50, 0, 23)
 TestGui.Numbers.Font = Enum.Font.Fantasy
 TestGui.Numbers.Text = "0%"
@@ -2386,51 +2439,40 @@ TestGui.Text1_19.TextXAlignment = Enum.TextXAlignment.Left
 TestGui.UICorner_33.CornerRadius = UDim.new(0, 5)
 TestGui.UICorner_33.Parent = TestGui.Button2Background
 
-TestGui.Section2Gui.Name = "Section2Gui"
-TestGui.Section2Gui.Parent = TestGui.MainMiddleButtons
-TestGui.Section2Gui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TestGui.Section2Gui.BackgroundTransparency = 1.000
-TestGui.Section2Gui.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TestGui.Section2Gui.BorderSizePixel = 0
-TestGui.Section2Gui.Position = UDim2.new(-0.00165562914, 0, 0.00251256279, 0)
-TestGui.Section2Gui.Size = UDim2.new(0.0130000003, 0, 0.0149999997, 0)
-TestGui.Section2Gui.Visible = false
-
-TestGui.Button3Background.Name = "Button3Background"
-TestGui.Button3Background.Parent = TestGui.Section2Gui
-TestGui.Button3Background.AnchorPoint = Vector2.new(0, 1)
-TestGui.Button3Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-TestGui.Button3Background.BackgroundTransparency = 0.300
-TestGui.Button3Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TestGui.Button3Background.BorderSizePixel = 0
-TestGui.Button3Background.Position = UDim2.new(1.02061319, 0, 10.2438002, 0)
-TestGui.Button3Background.Size = UDim2.new(0, 156, 0, 47)
+TestGui.Button16Background.Name = "Button16Background"
+TestGui.Button16Background.Parent = TestGui.Section1Gui
+TestGui.Button16Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TestGui.Button16Background.BackgroundTransparency = 0.100
+TestGui.Button16Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Button16Background.BorderSizePixel = 0
+TestGui.Button16Background.Position = UDim2.new(44.7559166, 0, 0.90741235, 0)
+TestGui.Button16Background.Size = UDim2.new(0, 156, 0, 47)
 
 TestGui.Text2_20.Name = "Text2"
-TestGui.Text2_20.Parent = TestGui.Button3Background
+TestGui.Text2_20.Parent = TestGui.Button16Background
 TestGui.Text2_20.AnchorPoint = Vector2.new(0, 1)
 TestGui.Text2_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Text2_20.BackgroundTransparency = 1.000
 TestGui.Text2_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TestGui.Text2_20.BorderSizePixel = 0
-TestGui.Text2_20.Position = UDim2.new(0.0900000036, 0, 1.15400004, 0)
+TestGui.Text2_20.Position = UDim2.new(0.0897435918, 0, 1.15425527, 0)
 TestGui.Text2_20.Size = UDim2.new(0, 115, 0, 40)
 TestGui.Text2_20.Font = Enum.Font.Roboto
-TestGui.Text2_20.Text = "Click for toggle Tag"
+TestGui.Text2_20.Text = "Click for toggle hitbox"
 TestGui.Text2_20.TextColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Text2_20.TextSize = 11.000
 TestGui.Text2_20.TextTransparency = 0.800
 TestGui.Text2_20.TextXAlignment = Enum.TextXAlignment.Left
 
 TestGui.Button1_20.Name = "Button1"
-TestGui.Button1_20.Parent = TestGui.Button3Background
+TestGui.Button1_20.Parent = TestGui.Button16Background
 TestGui.Button1_20.AnchorPoint = Vector2.new(0, 1)
 TestGui.Button1_20.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
 TestGui.Button1_20.BackgroundTransparency = 0.100
 TestGui.Button1_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TestGui.Button1_20.BorderSizePixel = 0
 TestGui.Button1_20.ClipsDescendants = true
-TestGui.Button1_20.Position = UDim2.new(0.762820542, 0, 0.808510661, 0)
+TestGui.Button1_20.Position = UDim2.new(0.763000011, 0, 0.809000015, 0)
 TestGui.Button1_20.Size = UDim2.new(0, 27, 0, 27)
 
 TestGui.ImageButton1_18.Name = "ImageButton1"
@@ -2458,35 +2500,45 @@ TestGui.UICorner_34.CornerRadius = UDim.new(0, 4)
 TestGui.UICorner_34.Parent = TestGui.Button1_20
 
 TestGui.Text1_20.Name = "Text1"
-TestGui.Text1_20.Parent = TestGui.Button3Background
+TestGui.Text1_20.Parent = TestGui.Button16Background
 TestGui.Text1_20.AnchorPoint = Vector2.new(0, 1)
 TestGui.Text1_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Text1_20.BackgroundTransparency = 1.000
 TestGui.Text1_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TestGui.Text1_20.BorderSizePixel = 0
-TestGui.Text1_20.Position = UDim2.new(0.0960000828, 0, 0.856340468, 0)
+TestGui.Text1_20.Position = UDim2.new(0.0960000008, 0, 0.856000006, 0)
 TestGui.Text1_20.Size = UDim2.new(0, 51, 0, 40)
 TestGui.Text1_20.Font = Enum.Font.Unknown
-TestGui.Text1_20.Text = "Nametags"
+TestGui.Text1_20.Text = "HitboxExtender"
 TestGui.Text1_20.TextColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Text1_20.TextSize = 11.000
 TestGui.Text1_20.TextXAlignment = Enum.TextXAlignment.Left
 
 TestGui.UICorner_35.CornerRadius = UDim.new(0, 5)
-TestGui.UICorner_35.Parent = TestGui.Button3Background
+TestGui.UICorner_35.Parent = TestGui.Button16Background
 
-TestGui.Button4Background.Name = "Button4Background"
-TestGui.Button4Background.Parent = TestGui.Section2Gui
-TestGui.Button4Background.AnchorPoint = Vector2.new(0, 1)
-TestGui.Button4Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-TestGui.Button4Background.BackgroundTransparency = 0.300
-TestGui.Button4Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TestGui.Button4Background.BorderSizePixel = 0
-TestGui.Button4Background.Position = UDim2.new(22.4018497, 0, 10.2494955, 0)
-TestGui.Button4Background.Size = UDim2.new(0, 156, 0, 47)
+TestGui.Section2Gui.Name = "Section2Gui"
+TestGui.Section2Gui.Parent = TestGui.MainMiddleButtons
+TestGui.Section2Gui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Section2Gui.BackgroundTransparency = 1.000
+TestGui.Section2Gui.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Section2Gui.BorderSizePixel = 0
+TestGui.Section2Gui.Position = UDim2.new(-0.00165562914, 0, 0.00251256279, 0)
+TestGui.Section2Gui.Size = UDim2.new(0.0130000003, 0, 0.0149999997, 0)
+TestGui.Section2Gui.Visible = false
+
+TestGui.Button3Background.Name = "Button3Background"
+TestGui.Button3Background.Parent = TestGui.Section2Gui
+TestGui.Button3Background.AnchorPoint = Vector2.new(0, 1)
+TestGui.Button3Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TestGui.Button3Background.BackgroundTransparency = 0.300
+TestGui.Button3Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Button3Background.BorderSizePixel = 0
+TestGui.Button3Background.Position = UDim2.new(1.02061319, 0, 10.2438002, 0)
+TestGui.Button3Background.Size = UDim2.new(0, 156, 0, 47)
 
 TestGui.Text2_21.Name = "Text2"
-TestGui.Text2_21.Parent = TestGui.Button4Background
+TestGui.Text2_21.Parent = TestGui.Button3Background
 TestGui.Text2_21.AnchorPoint = Vector2.new(0, 1)
 TestGui.Text2_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Text2_21.BackgroundTransparency = 1.000
@@ -2495,14 +2547,14 @@ TestGui.Text2_21.BorderSizePixel = 0
 TestGui.Text2_21.Position = UDim2.new(0.0900000036, 0, 1.15400004, 0)
 TestGui.Text2_21.Size = UDim2.new(0, 115, 0, 40)
 TestGui.Text2_21.Font = Enum.Font.Roboto
-TestGui.Text2_21.Text = "Click for toggle Light"
+TestGui.Text2_21.Text = "Click for toggle Tag"
 TestGui.Text2_21.TextColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Text2_21.TextSize = 11.000
 TestGui.Text2_21.TextTransparency = 0.800
 TestGui.Text2_21.TextXAlignment = Enum.TextXAlignment.Left
 
 TestGui.Button1_21.Name = "Button1"
-TestGui.Button1_21.Parent = TestGui.Button4Background
+TestGui.Button1_21.Parent = TestGui.Button3Background
 TestGui.Button1_21.AnchorPoint = Vector2.new(0, 1)
 TestGui.Button1_21.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
 TestGui.Button1_21.BackgroundTransparency = 0.100
@@ -2531,13 +2583,13 @@ TestGui.ImageButton2_19.BorderSizePixel = 0
 TestGui.ImageButton2_19.Position = UDim2.new(0, 2, 0.074000001, 0)
 TestGui.ImageButton2_19.Size = UDim2.new(0, 22, 0, 22)
 TestGui.ImageButton2_19.Image = "rbxassetid://2777727756"
-TestGui.ImageButton2_19.ImageColor3 = Color3.fromRGB(122, 167, 134)
+TestGui.ImageButton2_19.ImageColor3 = Color3.fromRGB(126, 112, 167)
 
 TestGui.UICorner_36.CornerRadius = UDim.new(0, 4)
 TestGui.UICorner_36.Parent = TestGui.Button1_21
 
 TestGui.Text1_21.Name = "Text1"
-TestGui.Text1_21.Parent = TestGui.Button4Background
+TestGui.Text1_21.Parent = TestGui.Button3Background
 TestGui.Text1_21.AnchorPoint = Vector2.new(0, 1)
 TestGui.Text1_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Text1_21.BackgroundTransparency = 1.000
@@ -2546,26 +2598,26 @@ TestGui.Text1_21.BorderSizePixel = 0
 TestGui.Text1_21.Position = UDim2.new(0.0960000828, 0, 0.856340468, 0)
 TestGui.Text1_21.Size = UDim2.new(0, 51, 0, 40)
 TestGui.Text1_21.Font = Enum.Font.Unknown
-TestGui.Text1_21.Text = "Fullbright"
+TestGui.Text1_21.Text = "Nametags"
 TestGui.Text1_21.TextColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Text1_21.TextSize = 11.000
 TestGui.Text1_21.TextXAlignment = Enum.TextXAlignment.Left
 
 TestGui.UICorner_37.CornerRadius = UDim.new(0, 5)
-TestGui.UICorner_37.Parent = TestGui.Button4Background
+TestGui.UICorner_37.Parent = TestGui.Button3Background
 
-TestGui.Button5Background.Name = "Button5Background"
-TestGui.Button5Background.Parent = TestGui.Section2Gui
-TestGui.Button5Background.AnchorPoint = Vector2.new(0, 1)
-TestGui.Button5Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-TestGui.Button5Background.BackgroundTransparency = 0.300
-TestGui.Button5Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TestGui.Button5Background.BorderSizePixel = 0
-TestGui.Button5Background.Position = UDim2.new(43.3095551, 0, 10.2464943, 0)
-TestGui.Button5Background.Size = UDim2.new(0, 156, 0, 47)
+TestGui.Button4Background.Name = "Button4Background"
+TestGui.Button4Background.Parent = TestGui.Section2Gui
+TestGui.Button4Background.AnchorPoint = Vector2.new(0, 1)
+TestGui.Button4Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TestGui.Button4Background.BackgroundTransparency = 0.300
+TestGui.Button4Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Button4Background.BorderSizePixel = 0
+TestGui.Button4Background.Position = UDim2.new(22.4018497, 0, 10.2494955, 0)
+TestGui.Button4Background.Size = UDim2.new(0, 156, 0, 47)
 
 TestGui.Text2_22.Name = "Text2"
-TestGui.Text2_22.Parent = TestGui.Button5Background
+TestGui.Text2_22.Parent = TestGui.Button4Background
 TestGui.Text2_22.AnchorPoint = Vector2.new(0, 1)
 TestGui.Text2_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Text2_22.BackgroundTransparency = 1.000
@@ -2574,14 +2626,14 @@ TestGui.Text2_22.BorderSizePixel = 0
 TestGui.Text2_22.Position = UDim2.new(0.0900000036, 0, 1.15400004, 0)
 TestGui.Text2_22.Size = UDim2.new(0, 115, 0, 40)
 TestGui.Text2_22.Font = Enum.Font.Roboto
-TestGui.Text2_22.Text = "Click for toggle Tracers"
+TestGui.Text2_22.Text = "Click for toggle Light"
 TestGui.Text2_22.TextColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Text2_22.TextSize = 11.000
 TestGui.Text2_22.TextTransparency = 0.800
 TestGui.Text2_22.TextXAlignment = Enum.TextXAlignment.Left
 
 TestGui.Button1_22.Name = "Button1"
-TestGui.Button1_22.Parent = TestGui.Button5Background
+TestGui.Button1_22.Parent = TestGui.Button4Background
 TestGui.Button1_22.AnchorPoint = Vector2.new(0, 1)
 TestGui.Button1_22.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
 TestGui.Button1_22.BackgroundTransparency = 0.100
@@ -2616,7 +2668,7 @@ TestGui.UICorner_38.CornerRadius = UDim.new(0, 4)
 TestGui.UICorner_38.Parent = TestGui.Button1_22
 
 TestGui.Text1_22.Name = "Text1"
-TestGui.Text1_22.Parent = TestGui.Button5Background
+TestGui.Text1_22.Parent = TestGui.Button4Background
 TestGui.Text1_22.AnchorPoint = Vector2.new(0, 1)
 TestGui.Text1_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Text1_22.BackgroundTransparency = 1.000
@@ -2625,26 +2677,26 @@ TestGui.Text1_22.BorderSizePixel = 0
 TestGui.Text1_22.Position = UDim2.new(0.0960000828, 0, 0.856340468, 0)
 TestGui.Text1_22.Size = UDim2.new(0, 51, 0, 40)
 TestGui.Text1_22.Font = Enum.Font.Unknown
-TestGui.Text1_22.Text = "Tracers"
+TestGui.Text1_22.Text = "Fullbright"
 TestGui.Text1_22.TextColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Text1_22.TextSize = 11.000
 TestGui.Text1_22.TextXAlignment = Enum.TextXAlignment.Left
 
 TestGui.UICorner_39.CornerRadius = UDim.new(0, 5)
-TestGui.UICorner_39.Parent = TestGui.Button5Background
+TestGui.UICorner_39.Parent = TestGui.Button4Background
 
-TestGui.Button6Background.Name = "Button6Background"
-TestGui.Button6Background.Parent = TestGui.Section2Gui
-TestGui.Button6Background.AnchorPoint = Vector2.new(0, 1)
-TestGui.Button6Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-TestGui.Button6Background.BackgroundTransparency = 0.300
-TestGui.Button6Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TestGui.Button6Background.BorderSizePixel = 0
-TestGui.Button6Background.Position = UDim2.new(1.02061319, 0, 19.2774391, 0)
-TestGui.Button6Background.Size = UDim2.new(0, 156, 0, 47)
+TestGui.Button5Background.Name = "Button5Background"
+TestGui.Button5Background.Parent = TestGui.Section2Gui
+TestGui.Button5Background.AnchorPoint = Vector2.new(0, 1)
+TestGui.Button5Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TestGui.Button5Background.BackgroundTransparency = 0.300
+TestGui.Button5Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Button5Background.BorderSizePixel = 0
+TestGui.Button5Background.Position = UDim2.new(43.3095551, 0, 10.2464943, 0)
+TestGui.Button5Background.Size = UDim2.new(0, 156, 0, 47)
 
 TestGui.Text2_23.Name = "Text2"
-TestGui.Text2_23.Parent = TestGui.Button6Background
+TestGui.Text2_23.Parent = TestGui.Button5Background
 TestGui.Text2_23.AnchorPoint = Vector2.new(0, 1)
 TestGui.Text2_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Text2_23.BackgroundTransparency = 1.000
@@ -2653,14 +2705,14 @@ TestGui.Text2_23.BorderSizePixel = 0
 TestGui.Text2_23.Position = UDim2.new(0.0900000036, 0, 1.15400004, 0)
 TestGui.Text2_23.Size = UDim2.new(0, 115, 0, 40)
 TestGui.Text2_23.Font = Enum.Font.Roboto
-TestGui.Text2_23.Text = "Click for toggle ESP"
+TestGui.Text2_23.Text = "Click for toggle Tracers"
 TestGui.Text2_23.TextColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Text2_23.TextSize = 11.000
 TestGui.Text2_23.TextTransparency = 0.800
 TestGui.Text2_23.TextXAlignment = Enum.TextXAlignment.Left
 
 TestGui.Button1_23.Name = "Button1"
-TestGui.Button1_23.Parent = TestGui.Button6Background
+TestGui.Button1_23.Parent = TestGui.Button5Background
 TestGui.Button1_23.AnchorPoint = Vector2.new(0, 1)
 TestGui.Button1_23.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
 TestGui.Button1_23.BackgroundTransparency = 0.100
@@ -2695,7 +2747,7 @@ TestGui.UICorner_40.CornerRadius = UDim.new(0, 4)
 TestGui.UICorner_40.Parent = TestGui.Button1_23
 
 TestGui.Text1_23.Name = "Text1"
-TestGui.Text1_23.Parent = TestGui.Button6Background
+TestGui.Text1_23.Parent = TestGui.Button5Background
 TestGui.Text1_23.AnchorPoint = Vector2.new(0, 1)
 TestGui.Text1_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Text1_23.BackgroundTransparency = 1.000
@@ -2704,36 +2756,26 @@ TestGui.Text1_23.BorderSizePixel = 0
 TestGui.Text1_23.Position = UDim2.new(0.0960000828, 0, 0.856340468, 0)
 TestGui.Text1_23.Size = UDim2.new(0, 51, 0, 40)
 TestGui.Text1_23.Font = Enum.Font.Unknown
-TestGui.Text1_23.Text = "PlayerESP"
+TestGui.Text1_23.Text = "Tracers"
 TestGui.Text1_23.TextColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Text1_23.TextSize = 11.000
 TestGui.Text1_23.TextXAlignment = Enum.TextXAlignment.Left
 
 TestGui.UICorner_41.CornerRadius = UDim.new(0, 5)
-TestGui.UICorner_41.Parent = TestGui.Button6Background
+TestGui.UICorner_41.Parent = TestGui.Button5Background
 
-TestGui.Section3Gui.Name = "Section3Gui"
-TestGui.Section3Gui.Parent = TestGui.MainMiddleButtons
-TestGui.Section3Gui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TestGui.Section3Gui.BackgroundTransparency = 1.000
-TestGui.Section3Gui.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TestGui.Section3Gui.BorderSizePixel = 0
-TestGui.Section3Gui.Visible = false
-TestGui.Section3Gui.Position = UDim2.new(-0.00165562914, 0, 0.00251256279, 0)
-TestGui.Section3Gui.Size = UDim2.new(0.0130000003, 0, 0.0149999997, 0)
-
-TestGui.Button7Background.Name = "Button7Background"
-TestGui.Button7Background.Parent = TestGui.Section3Gui
-TestGui.Button7Background.AnchorPoint = Vector2.new(0, 1)
-TestGui.Button7Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-TestGui.Button7Background.BackgroundTransparency = 0.300
-TestGui.Button7Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TestGui.Button7Background.BorderSizePixel = 0
-TestGui.Button7Background.Position = UDim2.new(1.02061319, 0, 10.2438002, 0)
-TestGui.Button7Background.Size = UDim2.new(0, 156, 0, 47)
+TestGui.Button6Background.Name = "Button6Background"
+TestGui.Button6Background.Parent = TestGui.Section2Gui
+TestGui.Button6Background.AnchorPoint = Vector2.new(0, 1)
+TestGui.Button6Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TestGui.Button6Background.BackgroundTransparency = 0.300
+TestGui.Button6Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Button6Background.BorderSizePixel = 0
+TestGui.Button6Background.Position = UDim2.new(1.02061319, 0, 19.2774391, 0)
+TestGui.Button6Background.Size = UDim2.new(0, 156, 0, 47)
 
 TestGui.Text2_24.Name = "Text2"
-TestGui.Text2_24.Parent = TestGui.Button7Background
+TestGui.Text2_24.Parent = TestGui.Button6Background
 TestGui.Text2_24.AnchorPoint = Vector2.new(0, 1)
 TestGui.Text2_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Text2_24.BackgroundTransparency = 1.000
@@ -2742,14 +2784,14 @@ TestGui.Text2_24.BorderSizePixel = 0
 TestGui.Text2_24.Position = UDim2.new(0.0900000036, 0, 1.15400004, 0)
 TestGui.Text2_24.Size = UDim2.new(0, 115, 0, 40)
 TestGui.Text2_24.Font = Enum.Font.Roboto
-TestGui.Text2_24.Text = "Click for toggle Fly"
+TestGui.Text2_24.Text = "Click for toggle ESP"
 TestGui.Text2_24.TextColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Text2_24.TextSize = 11.000
 TestGui.Text2_24.TextTransparency = 0.800
 TestGui.Text2_24.TextXAlignment = Enum.TextXAlignment.Left
 
 TestGui.Button1_24.Name = "Button1"
-TestGui.Button1_24.Parent = TestGui.Button7Background
+TestGui.Button1_24.Parent = TestGui.Button6Background
 TestGui.Button1_24.AnchorPoint = Vector2.new(0, 1)
 TestGui.Button1_24.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
 TestGui.Button1_24.BackgroundTransparency = 0.100
@@ -2778,13 +2820,13 @@ TestGui.ImageButton2_22.BorderSizePixel = 0
 TestGui.ImageButton2_22.Position = UDim2.new(0, 2, 0.074000001, 0)
 TestGui.ImageButton2_22.Size = UDim2.new(0, 22, 0, 22)
 TestGui.ImageButton2_22.Image = "rbxassetid://2777727756"
-TestGui.ImageButton2_22.ImageColor3 = Color3.fromRGB(126, 112, 167)
+TestGui.ImageButton2_22.ImageColor3 = Color3.fromRGB(122, 167, 134)
 
 TestGui.UICorner_42.CornerRadius = UDim.new(0, 4)
 TestGui.UICorner_42.Parent = TestGui.Button1_24
 
 TestGui.Text1_24.Name = "Text1"
-TestGui.Text1_24.Parent = TestGui.Button7Background
+TestGui.Text1_24.Parent = TestGui.Button6Background
 TestGui.Text1_24.AnchorPoint = Vector2.new(0, 1)
 TestGui.Text1_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Text1_24.BackgroundTransparency = 1.000
@@ -2793,42 +2835,86 @@ TestGui.Text1_24.BorderSizePixel = 0
 TestGui.Text1_24.Position = UDim2.new(0.0960000828, 0, 0.856340468, 0)
 TestGui.Text1_24.Size = UDim2.new(0, 51, 0, 40)
 TestGui.Text1_24.Font = Enum.Font.Unknown
-TestGui.Text1_24.Text = "Fly"
+TestGui.Text1_24.Text = "PlayerESP"
 TestGui.Text1_24.TextColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Text1_24.TextSize = 11.000
 TestGui.Text1_24.TextXAlignment = Enum.TextXAlignment.Left
 
 TestGui.UICorner_43.CornerRadius = UDim.new(0, 5)
-TestGui.UICorner_43.Parent = TestGui.Button7Background
+TestGui.UICorner_43.Parent = TestGui.Button6Background
 
-TestGui.Button8Background.Name = "Button8Background"
-TestGui.Button8Background.Parent = TestGui.Section3Gui
-TestGui.Button8Background.AnchorPoint = Vector2.new(0, 1)
-TestGui.Button8Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-TestGui.Button8Background.BackgroundTransparency = 0.300
-TestGui.Button8Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TestGui.Button8Background.BorderSizePixel = 0
-TestGui.Button8Background.Position = UDim2.new(22.4018497, 0, 10.2494955, 0)
-TestGui.Button8Background.Size = UDim2.new(0, 156, 0, 47)
+TestGui.Button14Background.Name = "Button14Background"
+TestGui.Button14Background.Parent = TestGui.Section2Gui
+TestGui.Button14Background.AnchorPoint = Vector2.new(0, 1)
+TestGui.Button14Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TestGui.Button14Background.BackgroundTransparency = 0.300
+TestGui.Button14Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Button14Background.BorderSizePixel = 0
+TestGui.Button14Background.Position = UDim2.new(22.4164352, 0, 19.1215229, 0)
+TestGui.Button14Background.Size = UDim2.new(0, 156, 0, 47)
 
 TestGui.Text2_25.Name = "Text2"
-TestGui.Text2_25.Parent = TestGui.Button8Background
+TestGui.Text2_25.Parent = TestGui.Button14Background
 TestGui.Text2_25.AnchorPoint = Vector2.new(0, 1)
 TestGui.Text2_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Text2_25.BackgroundTransparency = 1.000
 TestGui.Text2_25.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TestGui.Text2_25.BorderSizePixel = 0
-TestGui.Text2_25.Position = UDim2.new(0.0900000036, 0, 1.15400004, 0)
+TestGui.Text2_25.Position = UDim2.new(0.128461599, 0, 1.09017038, 0)
 TestGui.Text2_25.Size = UDim2.new(0, 115, 0, 40)
 TestGui.Text2_25.Font = Enum.Font.Roboto
-TestGui.Text2_25.Text = "Click for toggle NoClip"
+TestGui.Text2_25.Text = "Click to set custom skybox"
 TestGui.Text2_25.TextColor3 = Color3.fromRGB(255, 255, 255)
 TestGui.Text2_25.TextSize = 11.000
 TestGui.Text2_25.TextTransparency = 0.800
 TestGui.Text2_25.TextXAlignment = Enum.TextXAlignment.Left
 
+TestGui.Text1_25.Name = "Text1"
+TestGui.Text1_25.Parent = TestGui.Button14Background
+TestGui.Text1_25.AnchorPoint = Vector2.new(0, 1)
+TestGui.Text1_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text1_25.BackgroundTransparency = 1.000
+TestGui.Text1_25.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Text1_25.BorderSizePixel = 0
+TestGui.Text1_25.Position = UDim2.new(0.339589834, 0, 0.792510688, 0)
+TestGui.Text1_25.Size = UDim2.new(0, 51, 0, 40)
+TestGui.Text1_25.Font = Enum.Font.Unknown
+TestGui.Text1_25.Text = "Skyboxs"
+TestGui.Text1_25.TextColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text1_25.TextSize = 11.000
+TestGui.Text1_25.TextXAlignment = Enum.TextXAlignment.Left
+
+TestGui.UICorner_44.CornerRadius = UDim.new(0, 5)
+TestGui.UICorner_44.Parent = TestGui.Button14Background
+
+TestGui.Button15Background.Name = "Button15Background"
+TestGui.Button15Background.Parent = TestGui.Section2Gui
+TestGui.Button15Background.AnchorPoint = Vector2.new(0, 1)
+TestGui.Button15Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TestGui.Button15Background.BackgroundTransparency = 0.300
+TestGui.Button15Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Button15Background.BorderSizePixel = 0
+TestGui.Button15Background.Position = UDim2.new(43.3028336, 0, 19.1215229, 0)
+TestGui.Button15Background.Size = UDim2.new(0, 156, 0, 47)
+
+TestGui.Text2_26.Name = "Text2"
+TestGui.Text2_26.Parent = TestGui.Button15Background
+TestGui.Text2_26.AnchorPoint = Vector2.new(0, 1)
+TestGui.Text2_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text2_26.BackgroundTransparency = 1.000
+TestGui.Text2_26.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Text2_26.BorderSizePixel = 0
+TestGui.Text2_26.Position = UDim2.new(0.0900000036, 0, 1.15400004, 0)
+TestGui.Text2_26.Size = UDim2.new(0, 115, 0, 40)
+TestGui.Text2_26.Font = Enum.Font.Roboto
+TestGui.Text2_26.Text = "Click for toggle Chams"
+TestGui.Text2_26.TextColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text2_26.TextSize = 11.000
+TestGui.Text2_26.TextTransparency = 0.800
+TestGui.Text2_26.TextXAlignment = Enum.TextXAlignment.Left
+
 TestGui.Button1_25.Name = "Button1"
-TestGui.Button1_25.Parent = TestGui.Button8Background
+TestGui.Button1_25.Parent = TestGui.Button15Background
 TestGui.Button1_25.AnchorPoint = Vector2.new(0, 1)
 TestGui.Button1_25.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
 TestGui.Button1_25.BackgroundTransparency = 0.100
@@ -2857,57 +2943,67 @@ TestGui.ImageButton2_23.BorderSizePixel = 0
 TestGui.ImageButton2_23.Position = UDim2.new(0, 2, 0.074000001, 0)
 TestGui.ImageButton2_23.Size = UDim2.new(0, 22, 0, 22)
 TestGui.ImageButton2_23.Image = "rbxassetid://2777727756"
-TestGui.ImageButton2_23.ImageColor3 = Color3.fromRGB(122, 167, 134)
+TestGui.ImageButton2_23.ImageColor3 = Color3.fromRGB(126, 112, 167)
 
-TestGui.UICorner_44.CornerRadius = UDim.new(0, 4)
-TestGui.UICorner_44.Parent = TestGui.Button1_25
+TestGui.UICorner_45.CornerRadius = UDim.new(0, 4)
+TestGui.UICorner_45.Parent = TestGui.Button1_25
 
-TestGui.Text1_25.Name = "Text1"
-TestGui.Text1_25.Parent = TestGui.Button8Background
-TestGui.Text1_25.AnchorPoint = Vector2.new(0, 1)
-TestGui.Text1_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TestGui.Text1_25.BackgroundTransparency = 1.000
-TestGui.Text1_25.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TestGui.Text1_25.BorderSizePixel = 0
-TestGui.Text1_25.Position = UDim2.new(0.0960000828, 0, 0.856340468, 0)
-TestGui.Text1_25.Size = UDim2.new(0, 51, 0, 40)
-TestGui.Text1_25.Font = Enum.Font.Unknown
-TestGui.Text1_25.Text = "No-Clip"
-TestGui.Text1_25.TextColor3 = Color3.fromRGB(255, 255, 255)
-TestGui.Text1_25.TextSize = 11.000
-TestGui.Text1_25.TextXAlignment = Enum.TextXAlignment.Left
+TestGui.Text1_26.Name = "Text1"
+TestGui.Text1_26.Parent = TestGui.Button15Background
+TestGui.Text1_26.AnchorPoint = Vector2.new(0, 1)
+TestGui.Text1_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text1_26.BackgroundTransparency = 1.000
+TestGui.Text1_26.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Text1_26.BorderSizePixel = 0
+TestGui.Text1_26.Position = UDim2.new(0.0960000828, 0, 0.856340468, 0)
+TestGui.Text1_26.Size = UDim2.new(0, 51, 0, 40)
+TestGui.Text1_26.Font = Enum.Font.Unknown
+TestGui.Text1_26.Text = "Chams"
+TestGui.Text1_26.TextColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text1_26.TextSize = 11.000
+TestGui.Text1_26.TextXAlignment = Enum.TextXAlignment.Left
 
-TestGui.UICorner_45.CornerRadius = UDim.new(0, 5)
-TestGui.UICorner_45.Parent = TestGui.Button8Background
+TestGui.UICorner_46.CornerRadius = UDim.new(0, 5)
+TestGui.UICorner_46.Parent = TestGui.Button15Background
 
-TestGui.Button9Background.Name = "Button9Background"
-TestGui.Button9Background.Parent = TestGui.Section3Gui
-TestGui.Button9Background.AnchorPoint = Vector2.new(0, 1)
-TestGui.Button9Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-TestGui.Button9Background.BackgroundTransparency = 0.300
-TestGui.Button9Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TestGui.Button9Background.BorderSizePixel = 0
-TestGui.Button9Background.Position = UDim2.new(1.00602674, 0, 19.6297302, 0)
-TestGui.Button9Background.Size = UDim2.new(0, 156, 0, 47)
+TestGui.Section3Gui.Name = "Section3Gui"
+TestGui.Section3Gui.Parent = TestGui.MainMiddleButtons
+TestGui.Section3Gui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Section3Gui.BackgroundTransparency = 1.000
+TestGui.Section3Gui.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Section3Gui.BorderSizePixel = 0
+TestGui.Section3Gui.Position = UDim2.new(-0.00165562914, 0, 0.00251256279, 0)
+TestGui.Section3Gui.Size = UDim2.new(0.0130000003, 0, 0.0149999997, 0)
+TestGui.Section3Gui.Visible = false
 
-TestGui.Text2_26.Name = "Text2"
-TestGui.Text2_26.Parent = TestGui.Button9Background
-TestGui.Text2_26.AnchorPoint = Vector2.new(0, 1)
-TestGui.Text2_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TestGui.Text2_26.BackgroundTransparency = 1.000
-TestGui.Text2_26.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TestGui.Text2_26.BorderSizePixel = 0
-TestGui.Text2_26.Position = UDim2.new(0.0900000036, 0, 1.15400004, 0)
-TestGui.Text2_26.Size = UDim2.new(0, 115, 0, 40)
-TestGui.Text2_26.Font = Enum.Font.Roboto
-TestGui.Text2_26.Text = "Click for toggle Speed"
-TestGui.Text2_26.TextColor3 = Color3.fromRGB(255, 255, 255)
-TestGui.Text2_26.TextSize = 11.000
-TestGui.Text2_26.TextTransparency = 0.800
-TestGui.Text2_26.TextXAlignment = Enum.TextXAlignment.Left
+TestGui.Button7Background.Name = "Button7Background"
+TestGui.Button7Background.Parent = TestGui.Section3Gui
+TestGui.Button7Background.AnchorPoint = Vector2.new(0, 1)
+TestGui.Button7Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TestGui.Button7Background.BackgroundTransparency = 0.300
+TestGui.Button7Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Button7Background.BorderSizePixel = 0
+TestGui.Button7Background.Position = UDim2.new(1.02061319, 0, 10.2438002, 0)
+TestGui.Button7Background.Size = UDim2.new(0, 156, 0, 47)
+
+TestGui.Text2_27.Name = "Text2"
+TestGui.Text2_27.Parent = TestGui.Button7Background
+TestGui.Text2_27.AnchorPoint = Vector2.new(0, 1)
+TestGui.Text2_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text2_27.BackgroundTransparency = 1.000
+TestGui.Text2_27.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Text2_27.BorderSizePixel = 0
+TestGui.Text2_27.Position = UDim2.new(0.0900000036, 0, 1.15400004, 0)
+TestGui.Text2_27.Size = UDim2.new(0, 115, 0, 40)
+TestGui.Text2_27.Font = Enum.Font.Roboto
+TestGui.Text2_27.Text = "Click for toggle Fly"
+TestGui.Text2_27.TextColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text2_27.TextSize = 11.000
+TestGui.Text2_27.TextTransparency = 0.800
+TestGui.Text2_27.TextXAlignment = Enum.TextXAlignment.Left
 
 TestGui.Button1_26.Name = "Button1"
-TestGui.Button1_26.Parent = TestGui.Button9Background
+TestGui.Button1_26.Parent = TestGui.Button7Background
 TestGui.Button1_26.AnchorPoint = Vector2.new(0, 1)
 TestGui.Button1_26.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
 TestGui.Button1_26.BackgroundTransparency = 0.100
@@ -2936,57 +3032,57 @@ TestGui.ImageButton2_24.BorderSizePixel = 0
 TestGui.ImageButton2_24.Position = UDim2.new(0, 2, 0.074000001, 0)
 TestGui.ImageButton2_24.Size = UDim2.new(0, 22, 0, 22)
 TestGui.ImageButton2_24.Image = "rbxassetid://2777727756"
-TestGui.ImageButton2_24.ImageColor3 = Color3.fromRGB(122, 167, 134)
+TestGui.ImageButton2_24.ImageColor3 = Color3.fromRGB(126, 112, 167)
 
-TestGui.UICorner_46.CornerRadius = UDim.new(0, 4)
-TestGui.UICorner_46.Parent = TestGui.Button1_26
+TestGui.UICorner_47.CornerRadius = UDim.new(0, 4)
+TestGui.UICorner_47.Parent = TestGui.Button1_26
 
-TestGui.Text1_26.Name = "Text1"
-TestGui.Text1_26.Parent = TestGui.Button9Background
-TestGui.Text1_26.AnchorPoint = Vector2.new(0, 1)
-TestGui.Text1_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TestGui.Text1_26.BackgroundTransparency = 1.000
-TestGui.Text1_26.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TestGui.Text1_26.BorderSizePixel = 0
-TestGui.Text1_26.Position = UDim2.new(0.0960000828, 0, 0.856340468, 0)
-TestGui.Text1_26.Size = UDim2.new(0, 51, 0, 40)
-TestGui.Text1_26.Font = Enum.Font.Unknown
-TestGui.Text1_26.Text = "CharacterSpeed"
-TestGui.Text1_26.TextColor3 = Color3.fromRGB(255, 255, 255)
-TestGui.Text1_26.TextSize = 11.000
-TestGui.Text1_26.TextXAlignment = Enum.TextXAlignment.Left
+TestGui.Text1_27.Name = "Text1"
+TestGui.Text1_27.Parent = TestGui.Button7Background
+TestGui.Text1_27.AnchorPoint = Vector2.new(0, 1)
+TestGui.Text1_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text1_27.BackgroundTransparency = 1.000
+TestGui.Text1_27.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Text1_27.BorderSizePixel = 0
+TestGui.Text1_27.Position = UDim2.new(0.0960000828, 0, 0.856340468, 0)
+TestGui.Text1_27.Size = UDim2.new(0, 51, 0, 40)
+TestGui.Text1_27.Font = Enum.Font.Unknown
+TestGui.Text1_27.Text = "Fly"
+TestGui.Text1_27.TextColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text1_27.TextSize = 11.000
+TestGui.Text1_27.TextXAlignment = Enum.TextXAlignment.Left
 
-TestGui.UICorner_47.CornerRadius = UDim.new(0, 5)
-TestGui.UICorner_47.Parent = TestGui.Button9Background
+TestGui.UICorner_48.CornerRadius = UDim.new(0, 5)
+TestGui.UICorner_48.Parent = TestGui.Button7Background
 
-TestGui.Button10Background.Name = "Button10Background"
-TestGui.Button10Background.Parent = TestGui.Section3Gui
-TestGui.Button10Background.AnchorPoint = Vector2.new(0, 1)
-TestGui.Button10Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-TestGui.Button10Background.BackgroundTransparency = 0.300
-TestGui.Button10Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TestGui.Button10Background.BorderSizePixel = 0
-TestGui.Button10Background.Position = UDim2.new(22.4018497, 0, 19.9647388, 0)
-TestGui.Button10Background.Size = UDim2.new(0, 156, 0, 47)
+TestGui.Button8Background.Name = "Button8Background"
+TestGui.Button8Background.Parent = TestGui.Section3Gui
+TestGui.Button8Background.AnchorPoint = Vector2.new(0, 1)
+TestGui.Button8Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TestGui.Button8Background.BackgroundTransparency = 0.300
+TestGui.Button8Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Button8Background.BorderSizePixel = 0
+TestGui.Button8Background.Position = UDim2.new(22.4018497, 0, 10.2494955, 0)
+TestGui.Button8Background.Size = UDim2.new(0, 156, 0, 47)
 
-TestGui.Text2_27.Name = "Text2"
-TestGui.Text2_27.Parent = TestGui.Button10Background
-TestGui.Text2_27.AnchorPoint = Vector2.new(0, 1)
-TestGui.Text2_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TestGui.Text2_27.BackgroundTransparency = 1.000
-TestGui.Text2_27.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TestGui.Text2_27.BorderSizePixel = 0
-TestGui.Text2_27.Position = UDim2.new(0.0900000036, 0, 1.15400004, 0)
-TestGui.Text2_27.Size = UDim2.new(0, 115, 0, 40)
-TestGui.Text2_27.Font = Enum.Font.Roboto
-TestGui.Text2_27.Text = "Click for toggle Jump"
-TestGui.Text2_27.TextColor3 = Color3.fromRGB(255, 255, 255)
-TestGui.Text2_27.TextSize = 11.000
-TestGui.Text2_27.TextTransparency = 0.800
-TestGui.Text2_27.TextXAlignment = Enum.TextXAlignment.Left
+TestGui.Text2_28.Name = "Text2"
+TestGui.Text2_28.Parent = TestGui.Button8Background
+TestGui.Text2_28.AnchorPoint = Vector2.new(0, 1)
+TestGui.Text2_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text2_28.BackgroundTransparency = 1.000
+TestGui.Text2_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Text2_28.BorderSizePixel = 0
+TestGui.Text2_28.Position = UDim2.new(0.0900000036, 0, 1.15400004, 0)
+TestGui.Text2_28.Size = UDim2.new(0, 115, 0, 40)
+TestGui.Text2_28.Font = Enum.Font.Roboto
+TestGui.Text2_28.Text = "Click for toggle NoClip"
+TestGui.Text2_28.TextColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text2_28.TextSize = 11.000
+TestGui.Text2_28.TextTransparency = 0.800
+TestGui.Text2_28.TextXAlignment = Enum.TextXAlignment.Left
 
 TestGui.Button1_27.Name = "Button1"
-TestGui.Button1_27.Parent = TestGui.Button10Background
+TestGui.Button1_27.Parent = TestGui.Button8Background
 TestGui.Button1_27.AnchorPoint = Vector2.new(0, 1)
 TestGui.Button1_27.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
 TestGui.Button1_27.BackgroundTransparency = 0.100
@@ -3017,55 +3113,55 @@ TestGui.ImageButton2_25.Size = UDim2.new(0, 22, 0, 22)
 TestGui.ImageButton2_25.Image = "rbxassetid://2777727756"
 TestGui.ImageButton2_25.ImageColor3 = Color3.fromRGB(122, 167, 134)
 
-TestGui.UICorner_48.CornerRadius = UDim.new(0, 4)
-TestGui.UICorner_48.Parent = TestGui.Button1_27
+TestGui.UICorner_49.CornerRadius = UDim.new(0, 4)
+TestGui.UICorner_49.Parent = TestGui.Button1_27
 
-TestGui.Text1_27.Name = "Text1"
-TestGui.Text1_27.Parent = TestGui.Button10Background
-TestGui.Text1_27.AnchorPoint = Vector2.new(0, 1)
-TestGui.Text1_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TestGui.Text1_27.BackgroundTransparency = 1.000
-TestGui.Text1_27.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TestGui.Text1_27.BorderSizePixel = 0
-TestGui.Text1_27.Position = UDim2.new(0.0960000828, 0, 0.856340468, 0)
-TestGui.Text1_27.Size = UDim2.new(0, 51, 0, 40)
-TestGui.Text1_27.Font = Enum.Font.Unknown
-TestGui.Text1_27.Text = "CharacterJumppower"
-TestGui.Text1_27.TextColor3 = Color3.fromRGB(255, 255, 255)
-TestGui.Text1_27.TextSize = 11.000
-TestGui.Text1_27.TextXAlignment = Enum.TextXAlignment.Left
+TestGui.Text1_28.Name = "Text1"
+TestGui.Text1_28.Parent = TestGui.Button8Background
+TestGui.Text1_28.AnchorPoint = Vector2.new(0, 1)
+TestGui.Text1_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text1_28.BackgroundTransparency = 1.000
+TestGui.Text1_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Text1_28.BorderSizePixel = 0
+TestGui.Text1_28.Position = UDim2.new(0.0960000828, 0, 0.856340468, 0)
+TestGui.Text1_28.Size = UDim2.new(0, 51, 0, 40)
+TestGui.Text1_28.Font = Enum.Font.Unknown
+TestGui.Text1_28.Text = "No-Clip"
+TestGui.Text1_28.TextColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text1_28.TextSize = 11.000
+TestGui.Text1_28.TextXAlignment = Enum.TextXAlignment.Left
 
-TestGui.UICorner_49.CornerRadius = UDim.new(0, 5)
-TestGui.UICorner_49.Parent = TestGui.Button10Background
+TestGui.UICorner_50.CornerRadius = UDim.new(0, 5)
+TestGui.UICorner_50.Parent = TestGui.Button8Background
 
-TestGui.Button11Background.Name = "Button11Background"
-TestGui.Button11Background.Parent = TestGui.Section3Gui
-TestGui.Button11Background.AnchorPoint = Vector2.new(0, 1)
-TestGui.Button11Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-TestGui.Button11Background.BackgroundTransparency = 0.300
-TestGui.Button11Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TestGui.Button11Background.BorderSizePixel = 0
-TestGui.Button11Background.Position = UDim2.new(43.0335312, 0, 10.4169989, 0)
-TestGui.Button11Background.Size = UDim2.new(0, 156, 0, 47)
+TestGui.Button9Background.Name = "Button9Background"
+TestGui.Button9Background.Parent = TestGui.Section3Gui
+TestGui.Button9Background.AnchorPoint = Vector2.new(0, 1)
+TestGui.Button9Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TestGui.Button9Background.BackgroundTransparency = 0.300
+TestGui.Button9Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Button9Background.BorderSizePixel = 0
+TestGui.Button9Background.Position = UDim2.new(1.00602674, 0, 19.6297302, 0)
+TestGui.Button9Background.Size = UDim2.new(0, 156, 0, 47)
 
-TestGui.Text2_28.Name = "Text2"
-TestGui.Text2_28.Parent = TestGui.Button11Background
-TestGui.Text2_28.AnchorPoint = Vector2.new(0, 1)
-TestGui.Text2_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TestGui.Text2_28.BackgroundTransparency = 1.000
-TestGui.Text2_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TestGui.Text2_28.BorderSizePixel = 0
-TestGui.Text2_28.Position = UDim2.new(0.0900000036, 0, 1.15400004, 0)
-TestGui.Text2_28.Size = UDim2.new(0, 115, 0, 40)
-TestGui.Text2_28.Font = Enum.Font.Roboto
-TestGui.Text2_28.Text = "Click for toggle Antilock"
-TestGui.Text2_28.TextColor3 = Color3.fromRGB(255, 255, 255)
-TestGui.Text2_28.TextSize = 11.000
-TestGui.Text2_28.TextTransparency = 0.800
-TestGui.Text2_28.TextXAlignment = Enum.TextXAlignment.Left
+TestGui.Text2_29.Name = "Text2"
+TestGui.Text2_29.Parent = TestGui.Button9Background
+TestGui.Text2_29.AnchorPoint = Vector2.new(0, 1)
+TestGui.Text2_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text2_29.BackgroundTransparency = 1.000
+TestGui.Text2_29.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Text2_29.BorderSizePixel = 0
+TestGui.Text2_29.Position = UDim2.new(0.0900000036, 0, 1.15400004, 0)
+TestGui.Text2_29.Size = UDim2.new(0, 115, 0, 40)
+TestGui.Text2_29.Font = Enum.Font.Roboto
+TestGui.Text2_29.Text = "Click for toggle Speed"
+TestGui.Text2_29.TextColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text2_29.TextSize = 11.000
+TestGui.Text2_29.TextTransparency = 0.800
+TestGui.Text2_29.TextXAlignment = Enum.TextXAlignment.Left
 
 TestGui.Button1_28.Name = "Button1"
-TestGui.Button1_28.Parent = TestGui.Button11Background
+TestGui.Button1_28.Parent = TestGui.Button9Background
 TestGui.Button1_28.AnchorPoint = Vector2.new(0, 1)
 TestGui.Button1_28.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
 TestGui.Button1_28.BackgroundTransparency = 0.100
@@ -3096,26 +3192,317 @@ TestGui.ImageButton2_26.Size = UDim2.new(0, 22, 0, 22)
 TestGui.ImageButton2_26.Image = "rbxassetid://2777727756"
 TestGui.ImageButton2_26.ImageColor3 = Color3.fromRGB(122, 167, 134)
 
-TestGui.UICorner_50.CornerRadius = UDim.new(0, 4)
-TestGui.UICorner_50.Parent = TestGui.Button1_28
+TestGui.UICorner_51.CornerRadius = UDim.new(0, 4)
+TestGui.UICorner_51.Parent = TestGui.Button1_28
 
-TestGui.Text1_28.Name = "Text1"
-TestGui.Text1_28.Parent = TestGui.Button11Background
-TestGui.Text1_28.AnchorPoint = Vector2.new(0, 1)
-TestGui.Text1_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TestGui.Text1_28.BackgroundTransparency = 1.000
-TestGui.Text1_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TestGui.Text1_28.BorderSizePixel = 0
-TestGui.Text1_28.Position = UDim2.new(0.0960000828, 0, 0.856340468, 0)
-TestGui.Text1_28.Size = UDim2.new(0, 51, 0, 40)
-TestGui.Text1_28.Font = Enum.Font.Unknown
-TestGui.Text1_28.Text = "AntiLock"
-TestGui.Text1_28.TextColor3 = Color3.fromRGB(255, 255, 255)
-TestGui.Text1_28.TextSize = 11.000
-TestGui.Text1_28.TextXAlignment = Enum.TextXAlignment.Left
+TestGui.Text1_29.Name = "Text1"
+TestGui.Text1_29.Parent = TestGui.Button9Background
+TestGui.Text1_29.AnchorPoint = Vector2.new(0, 1)
+TestGui.Text1_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text1_29.BackgroundTransparency = 1.000
+TestGui.Text1_29.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Text1_29.BorderSizePixel = 0
+TestGui.Text1_29.Position = UDim2.new(0.0960000828, 0, 0.856340468, 0)
+TestGui.Text1_29.Size = UDim2.new(0, 51, 0, 40)
+TestGui.Text1_29.Font = Enum.Font.Unknown
+TestGui.Text1_29.Text = "Speed"
+TestGui.Text1_29.TextColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text1_29.TextSize = 11.000
+TestGui.Text1_29.TextXAlignment = Enum.TextXAlignment.Left
 
-TestGui.UICorner_51.CornerRadius = UDim.new(0, 5)
-TestGui.UICorner_51.Parent = TestGui.Button11Background
+TestGui.UICorner_52.CornerRadius = UDim.new(0, 5)
+TestGui.UICorner_52.Parent = TestGui.Button9Background
+
+TestGui.Button10Background.Name = "Button10Background"
+TestGui.Button10Background.Parent = TestGui.Section3Gui
+TestGui.Button10Background.AnchorPoint = Vector2.new(0, 1)
+TestGui.Button10Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TestGui.Button10Background.BackgroundTransparency = 0.300
+TestGui.Button10Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Button10Background.BorderSizePixel = 0
+TestGui.Button10Background.Position = UDim2.new(22.4018497, 0, 19.6297302, 0)
+TestGui.Button10Background.Size = UDim2.new(0, 156, 0, 47)
+
+TestGui.Text2_30.Name = "Text2"
+TestGui.Text2_30.Parent = TestGui.Button10Background
+TestGui.Text2_30.AnchorPoint = Vector2.new(0, 1)
+TestGui.Text2_30.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text2_30.BackgroundTransparency = 1.000
+TestGui.Text2_30.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Text2_30.BorderSizePixel = 0
+TestGui.Text2_30.Position = UDim2.new(0.0900000036, 0, 1.15400004, 0)
+TestGui.Text2_30.Size = UDim2.new(0, 115, 0, 40)
+TestGui.Text2_30.Font = Enum.Font.Roboto
+TestGui.Text2_30.Text = "Click for toggle Jump"
+TestGui.Text2_30.TextColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text2_30.TextSize = 11.000
+TestGui.Text2_30.TextTransparency = 0.800
+TestGui.Text2_30.TextXAlignment = Enum.TextXAlignment.Left
+
+TestGui.Button1_29.Name = "Button1"
+TestGui.Button1_29.Parent = TestGui.Button10Background
+TestGui.Button1_29.AnchorPoint = Vector2.new(0, 1)
+TestGui.Button1_29.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+TestGui.Button1_29.BackgroundTransparency = 0.100
+TestGui.Button1_29.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Button1_29.BorderSizePixel = 0
+TestGui.Button1_29.ClipsDescendants = true
+TestGui.Button1_29.Position = UDim2.new(0.762820542, 0, 0.808510661, 0)
+TestGui.Button1_29.Size = UDim2.new(0, 27, 0, 27)
+
+TestGui.ImageButton1_27.Name = "ImageButton1"
+TestGui.ImageButton1_27.Parent = TestGui.Button1_29
+TestGui.ImageButton1_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.ImageButton1_27.BackgroundTransparency = 1.000
+TestGui.ImageButton1_27.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.ImageButton1_27.BorderSizePixel = 0
+TestGui.ImageButton1_27.Position = UDim2.new(0, 2, 0.888999999, 0)
+TestGui.ImageButton1_27.Size = UDim2.new(0, 22, 0, 22)
+TestGui.ImageButton1_27.Image = "rbxassetid://2790552399"
+
+TestGui.ImageButton2_27.Name = "ImageButton2"
+TestGui.ImageButton2_27.Parent = TestGui.Button1_29
+TestGui.ImageButton2_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.ImageButton2_27.BackgroundTransparency = 1.000
+TestGui.ImageButton2_27.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.ImageButton2_27.BorderSizePixel = 0
+TestGui.ImageButton2_27.Position = UDim2.new(0, 2, 0.074000001, 0)
+TestGui.ImageButton2_27.Size = UDim2.new(0, 22, 0, 22)
+TestGui.ImageButton2_27.Image = "rbxassetid://2777727756"
+TestGui.ImageButton2_27.ImageColor3 = Color3.fromRGB(122, 167, 134)
+
+TestGui.UICorner_53.CornerRadius = UDim.new(0, 4)
+TestGui.UICorner_53.Parent = TestGui.Button1_29
+
+TestGui.Text1_30.Name = "Text1"
+TestGui.Text1_30.Parent = TestGui.Button10Background
+TestGui.Text1_30.AnchorPoint = Vector2.new(0, 1)
+TestGui.Text1_30.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text1_30.BackgroundTransparency = 1.000
+TestGui.Text1_30.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Text1_30.BorderSizePixel = 0
+TestGui.Text1_30.Position = UDim2.new(0.0960000828, 0, 0.856340468, 0)
+TestGui.Text1_30.Size = UDim2.new(0, 51, 0, 40)
+TestGui.Text1_30.Font = Enum.Font.Unknown
+TestGui.Text1_30.Text = "Jumppower"
+TestGui.Text1_30.TextColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text1_30.TextSize = 11.000
+TestGui.Text1_30.TextXAlignment = Enum.TextXAlignment.Left
+
+TestGui.UICorner_54.CornerRadius = UDim.new(0, 5)
+TestGui.UICorner_54.Parent = TestGui.Button10Background
+
+TestGui.Button11Background.Name = "Button11Background"
+TestGui.Button11Background.Parent = TestGui.Section3Gui
+TestGui.Button11Background.AnchorPoint = Vector2.new(0, 1)
+TestGui.Button11Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TestGui.Button11Background.BackgroundTransparency = 0.300
+TestGui.Button11Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Button11Background.BorderSizePixel = 0
+TestGui.Button11Background.Position = UDim2.new(43.0335312, 0, 10.4169989, 0)
+TestGui.Button11Background.Size = UDim2.new(0, 156, 0, 47)
+
+TestGui.Text2_31.Name = "Text2"
+TestGui.Text2_31.Parent = TestGui.Button11Background
+TestGui.Text2_31.AnchorPoint = Vector2.new(0, 1)
+TestGui.Text2_31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text2_31.BackgroundTransparency = 1.000
+TestGui.Text2_31.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Text2_31.BorderSizePixel = 0
+TestGui.Text2_31.Position = UDim2.new(0.0900000036, 0, 1.15400004, 0)
+TestGui.Text2_31.Size = UDim2.new(0, 115, 0, 40)
+TestGui.Text2_31.Font = Enum.Font.Roboto
+TestGui.Text2_31.Text = "Click for toggle Antilock"
+TestGui.Text2_31.TextColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text2_31.TextSize = 11.000
+TestGui.Text2_31.TextTransparency = 0.800
+TestGui.Text2_31.TextXAlignment = Enum.TextXAlignment.Left
+
+TestGui.Button1_30.Name = "Button1"
+TestGui.Button1_30.Parent = TestGui.Button11Background
+TestGui.Button1_30.AnchorPoint = Vector2.new(0, 1)
+TestGui.Button1_30.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+TestGui.Button1_30.BackgroundTransparency = 0.100
+TestGui.Button1_30.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Button1_30.BorderSizePixel = 0
+TestGui.Button1_30.ClipsDescendants = true
+TestGui.Button1_30.Position = UDim2.new(0.762820542, 0, 0.808510661, 0)
+TestGui.Button1_30.Size = UDim2.new(0, 27, 0, 27)
+
+TestGui.ImageButton1_28.Name = "ImageButton1"
+TestGui.ImageButton1_28.Parent = TestGui.Button1_30
+TestGui.ImageButton1_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.ImageButton1_28.BackgroundTransparency = 1.000
+TestGui.ImageButton1_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.ImageButton1_28.BorderSizePixel = 0
+TestGui.ImageButton1_28.Position = UDim2.new(0, 2, 0.888999999, 0)
+TestGui.ImageButton1_28.Size = UDim2.new(0, 22, 0, 22)
+TestGui.ImageButton1_28.Image = "rbxassetid://2790552399"
+
+TestGui.ImageButton2_28.Name = "ImageButton2"
+TestGui.ImageButton2_28.Parent = TestGui.Button1_30
+TestGui.ImageButton2_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.ImageButton2_28.BackgroundTransparency = 1.000
+TestGui.ImageButton2_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.ImageButton2_28.BorderSizePixel = 0
+TestGui.ImageButton2_28.Position = UDim2.new(0, 2, 0.074000001, 0)
+TestGui.ImageButton2_28.Size = UDim2.new(0, 22, 0, 22)
+TestGui.ImageButton2_28.Image = "rbxassetid://2777727756"
+TestGui.ImageButton2_28.ImageColor3 = Color3.fromRGB(122, 167, 134)
+
+TestGui.UICorner_55.CornerRadius = UDim.new(0, 4)
+TestGui.UICorner_55.Parent = TestGui.Button1_30
+
+TestGui.Text1_31.Name = "Text1"
+TestGui.Text1_31.Parent = TestGui.Button11Background
+TestGui.Text1_31.AnchorPoint = Vector2.new(0, 1)
+TestGui.Text1_31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text1_31.BackgroundTransparency = 1.000
+TestGui.Text1_31.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Text1_31.BorderSizePixel = 0
+TestGui.Text1_31.Position = UDim2.new(0.0960000828, 0, 0.856340468, 0)
+TestGui.Text1_31.Size = UDim2.new(0, 51, 0, 40)
+TestGui.Text1_31.Font = Enum.Font.Unknown
+TestGui.Text1_31.Text = "AntiLock"
+TestGui.Text1_31.TextColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text1_31.TextSize = 11.000
+TestGui.Text1_31.TextXAlignment = Enum.TextXAlignment.Left
+
+TestGui.UICorner_56.CornerRadius = UDim.new(0, 5)
+TestGui.UICorner_56.Parent = TestGui.Button11Background
+
+TestGui.Section4Gui.Name = "Section4Gui"
+TestGui.Section4Gui.Parent = TestGui.MainMiddleButtons
+TestGui.Section4Gui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Section4Gui.BackgroundTransparency = 1.000
+TestGui.Section4Gui.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Section4Gui.BorderSizePixel = 0
+TestGui.Section4Gui.Position = UDim2.new(-0.00165562914, 0, 0.00251256279, 0)
+TestGui.Section4Gui.Size = UDim2.new(0.0130000003, 0, 0.0149999997, 0)
+TestGui.Section4Gui.Visible = false
+
+TestGui.Button12Background.Name = "Button12Background"
+TestGui.Button12Background.Parent = TestGui.Section4Gui
+TestGui.Button12Background.AnchorPoint = Vector2.new(0, 1)
+TestGui.Button12Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TestGui.Button12Background.BackgroundTransparency = 0.300
+TestGui.Button12Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Button12Background.BorderSizePixel = 0
+TestGui.Button12Background.Position = UDim2.new(1.02061319, 0, 10.2438002, 0)
+TestGui.Button12Background.Size = UDim2.new(0, 156, 0, 47)
+
+TestGui.Text2_32.Name = "Text2"
+TestGui.Text2_32.Parent = TestGui.Button12Background
+TestGui.Text2_32.AnchorPoint = Vector2.new(0, 1)
+TestGui.Text2_32.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text2_32.BackgroundTransparency = 1.000
+TestGui.Text2_32.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Text2_32.BorderSizePixel = 0
+TestGui.Text2_32.Position = UDim2.new(0.0900000036, 0, 1.15400004, 0)
+TestGui.Text2_32.Size = UDim2.new(0, 115, 0, 40)
+TestGui.Text2_32.Font = Enum.Font.Roboto
+TestGui.Text2_32.Text = "Click for toggle boost"
+TestGui.Text2_32.TextColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text2_32.TextSize = 11.000
+TestGui.Text2_32.TextTransparency = 0.800
+TestGui.Text2_32.TextXAlignment = Enum.TextXAlignment.Left
+
+TestGui.Button1_31.Name = "Button1"
+TestGui.Button1_31.Parent = TestGui.Button12Background
+TestGui.Button1_31.AnchorPoint = Vector2.new(0, 1)
+TestGui.Button1_31.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+TestGui.Button1_31.BackgroundTransparency = 0.100
+TestGui.Button1_31.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Button1_31.BorderSizePixel = 0
+TestGui.Button1_31.ClipsDescendants = true
+TestGui.Button1_31.Position = UDim2.new(0.762820542, 0, 0.808510661, 0)
+TestGui.Button1_31.Size = UDim2.new(0, 27, 0, 27)
+
+TestGui.ImageButton1_29.Name = "ImageButton1"
+TestGui.ImageButton1_29.Parent = TestGui.Button1_31
+TestGui.ImageButton1_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.ImageButton1_29.BackgroundTransparency = 1.000
+TestGui.ImageButton1_29.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.ImageButton1_29.BorderSizePixel = 0
+TestGui.ImageButton1_29.Position = UDim2.new(0, 2, 0.888999999, 0)
+TestGui.ImageButton1_29.Size = UDim2.new(0, 22, 0, 22)
+TestGui.ImageButton1_29.Image = "rbxassetid://2790552399"
+
+TestGui.ImageButton2_29.Name = "ImageButton2"
+TestGui.ImageButton2_29.Parent = TestGui.Button1_31
+TestGui.ImageButton2_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.ImageButton2_29.BackgroundTransparency = 1.000
+TestGui.ImageButton2_29.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.ImageButton2_29.BorderSizePixel = 0
+TestGui.ImageButton2_29.Position = UDim2.new(0, 2, 0.074000001, 0)
+TestGui.ImageButton2_29.Size = UDim2.new(0, 22, 0, 22)
+TestGui.ImageButton2_29.Image = "rbxassetid://2777727756"
+TestGui.ImageButton2_29.ImageColor3 = Color3.fromRGB(126, 112, 167)
+
+TestGui.UICorner_57.CornerRadius = UDim.new(0, 4)
+TestGui.UICorner_57.Parent = TestGui.Button1_31
+
+TestGui.Text1_32.Name = "Text1"
+TestGui.Text1_32.Parent = TestGui.Button12Background
+TestGui.Text1_32.AnchorPoint = Vector2.new(0, 1)
+TestGui.Text1_32.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text1_32.BackgroundTransparency = 1.000
+TestGui.Text1_32.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Text1_32.BorderSizePixel = 0
+TestGui.Text1_32.Position = UDim2.new(0.0960000828, 0, 0.856340468, 0)
+TestGui.Text1_32.Size = UDim2.new(0, 51, 0, 40)
+TestGui.Text1_32.Font = Enum.Font.Unknown
+TestGui.Text1_32.Text = "Fpsboost"
+TestGui.Text1_32.TextColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text1_32.TextSize = 11.000
+TestGui.Text1_32.TextXAlignment = Enum.TextXAlignment.Left
+
+TestGui.UICorner_58.CornerRadius = UDim.new(0, 5)
+TestGui.UICorner_58.Parent = TestGui.Button12Background
+
+TestGui.Button13Background.Name = "Button13Background"
+TestGui.Button13Background.Parent = TestGui.Section4Gui
+TestGui.Button13Background.AnchorPoint = Vector2.new(0, 1)
+TestGui.Button13Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TestGui.Button13Background.BackgroundTransparency = 0.300
+TestGui.Button13Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Button13Background.BorderSizePixel = 0
+TestGui.Button13Background.Position = UDim2.new(22.4164352, 0, 10.2438002, 0)
+TestGui.Button13Background.Size = UDim2.new(0, 156, 0, 47)
+
+TestGui.Text2_33.Name = "Text2"
+TestGui.Text2_33.Parent = TestGui.Button13Background
+TestGui.Text2_33.AnchorPoint = Vector2.new(0, 1)
+TestGui.Text2_33.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text2_33.BackgroundTransparency = 1.000
+TestGui.Text2_33.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Text2_33.BorderSizePixel = 0
+TestGui.Text2_33.Position = UDim2.new(0.211794928, 0, 1.11144698, 0)
+TestGui.Text2_33.Size = UDim2.new(0, 115, 0, 40)
+TestGui.Text2_33.Font = Enum.Font.Roboto
+TestGui.Text2_33.Text = "Click for Adjust Fov"
+TestGui.Text2_33.TextColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text2_33.TextSize = 11.000
+TestGui.Text2_33.TextTransparency = 0.800
+TestGui.Text2_33.TextXAlignment = Enum.TextXAlignment.Left
+
+TestGui.Text1_33.Name = "Text1"
+TestGui.Text1_33.Parent = TestGui.Button13Background
+TestGui.Text1_33.AnchorPoint = Vector2.new(0, 1)
+TestGui.Text1_33.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text1_33.BackgroundTransparency = 1.000
+TestGui.Text1_33.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TestGui.Text1_33.BorderSizePixel = 0
+TestGui.Text1_33.Position = UDim2.new(0.339589834, 0, 0.792510688, 0)
+TestGui.Text1_33.Size = UDim2.new(0, 51, 0, 40)
+TestGui.Text1_33.Font = Enum.Font.Unknown
+TestGui.Text1_33.Text = "PlayerFov"
+TestGui.Text1_33.TextColor3 = Color3.fromRGB(255, 255, 255)
+TestGui.Text1_33.TextSize = 11.000
+TestGui.Text1_33.TextXAlignment = Enum.TextXAlignment.Left
+
+TestGui.UICorner_59.CornerRadius = UDim.new(0, 5)
+TestGui.UICorner_59.Parent = TestGui.Button13Background
 
 TestGui.ColorPicker.Name = "ColorPicker"
 TestGui.ColorPicker.Parent = TestGui.TestGui
@@ -3135,8 +3522,8 @@ TestGui.UIPadding.PaddingLeft = UDim.new(0.0199999996, 0)
 TestGui.UIPadding.PaddingRight = UDim.new(0.0199999996, 0)
 TestGui.UIPadding.PaddingTop = UDim.new(0.0179999992, 0)
 
-TestGui.UICorner_52.CornerRadius = UDim.new(0.0500000007, 0)
-TestGui.UICorner_52.Parent = TestGui.ColorPicker_2
+TestGui.UICorner_60.CornerRadius = UDim.new(0.0500000007, 0)
+TestGui.UICorner_60.Parent = TestGui.ColorPicker_2
 
 TestGui.UIAspectRatioConstraint.Parent = TestGui.ColorPicker_2
 TestGui.UIAspectRatioConstraint.AspectRatio = 1.200
@@ -3184,8 +3571,8 @@ TestGui.bar.BorderSizePixel = 0
 TestGui.bar.Position = UDim2.new(0.5, 0, 0.5, 0)
 TestGui.bar.Size = UDim2.new(2, 0, 0.800000012, 0)
 
-TestGui.UICorner_53.CornerRadius = UDim.new(1, 0)
-TestGui.UICorner_53.Parent = TestGui.bar
+TestGui.UICorner_61.CornerRadius = UDim.new(1, 0)
+TestGui.UICorner_61.Parent = TestGui.bar
 
 TestGui.gradient.Name = "gradient"
 TestGui.gradient.Parent = TestGui.bottomSlider
@@ -3197,11 +3584,11 @@ TestGui.gradient.Size = UDim2.new(1, 0, 1, 0)
 TestGui.UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
 TestGui.UIGradient_4.Parent = TestGui.gradient
 
-TestGui.UICorner_54.CornerRadius = UDim.new(0.25, 3)
-TestGui.UICorner_54.Parent = TestGui.gradient
+TestGui.UICorner_62.CornerRadius = UDim.new(0.25, 3)
+TestGui.UICorner_62.Parent = TestGui.gradient
 
-TestGui.UICorner_55.CornerRadius = UDim.new(0, 3)
-TestGui.UICorner_55.Parent = TestGui.bottomSlider
+TestGui.UICorner_63.CornerRadius = UDim.new(0, 3)
+TestGui.UICorner_63.Parent = TestGui.bottomSlider
 
 TestGui.topSlider.Name = "topSlider"
 TestGui.topSlider.Parent = TestGui.sliders
@@ -3233,11 +3620,11 @@ TestGui.bar_2.BorderSizePixel = 0
 TestGui.bar_2.Position = UDim2.new(0.5, 0, 0.549995124, 0)
 TestGui.bar_2.Size = UDim2.new(1, 0, 0, 0)
 
-TestGui.UICorner_56.CornerRadius = UDim.new(1, 0)
-TestGui.UICorner_56.Parent = TestGui.bar_2
+TestGui.UICorner_64.CornerRadius = UDim.new(1, 0)
+TestGui.UICorner_64.Parent = TestGui.bar_2
 
-TestGui.UICorner_57.CornerRadius = UDim.new(0, 66)
-TestGui.UICorner_57.Parent = TestGui.Picker_2
+TestGui.UICorner_65.CornerRadius = UDim.new(0, 66)
+TestGui.UICorner_65.Parent = TestGui.Picker_2
 
 TestGui.gradient_2.Name = "gradient"
 TestGui.gradient_2.Parent = TestGui.topSlider
@@ -3249,11 +3636,11 @@ TestGui.gradient_2.Size = UDim2.new(1, 0, 1, 0)
 TestGui.UIGradient_5.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(0.17, Color3.fromRGB(255, 255, 0)), ColorSequenceKeypoint.new(0.35, Color3.fromRGB(0, 255, 0)), ColorSequenceKeypoint.new(0.52, Color3.fromRGB(0, 255, 255)), ColorSequenceKeypoint.new(0.70, Color3.fromRGB(0, 0, 255)), ColorSequenceKeypoint.new(0.88, Color3.fromRGB(255, 0, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
 TestGui.UIGradient_5.Parent = TestGui.gradient_2
 
-TestGui.UICorner_58.CornerRadius = UDim.new(0.25, 3)
-TestGui.UICorner_58.Parent = TestGui.gradient_2
+TestGui.UICorner_66.CornerRadius = UDim.new(0.25, 3)
+TestGui.UICorner_66.Parent = TestGui.gradient_2
 
-TestGui.UICorner_59.CornerRadius = UDim.new(0, 3)
-TestGui.UICorner_59.Parent = TestGui.topSlider
+TestGui.UICorner_67.CornerRadius = UDim.new(0, 3)
+TestGui.UICorner_67.Parent = TestGui.topSlider
 
 TestGui.inputs.Name = "inputs"
 TestGui.inputs.Parent = TestGui.ColorPicker_2
@@ -3279,8 +3666,8 @@ TestGui.UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
 TestGui.UIAspectRatioConstraint_2.Parent = TestGui.HEX
 TestGui.UIAspectRatioConstraint_2.AspectRatio = 10.000
 
-TestGui.UICorner_60.CornerRadius = UDim.new(0.25, 0)
-TestGui.UICorner_60.Parent = TestGui.HEX
+TestGui.UICorner_68.CornerRadius = UDim.new(0.25, 0)
+TestGui.UICorner_68.Parent = TestGui.HEX
 
 TestGui.TextLabel_2.Parent = TestGui.HEX
 TestGui.TextLabel_2.AnchorPoint = Vector2.new(0, 0.5)
@@ -3307,8 +3694,8 @@ TestGui.TextBox.Position = UDim2.new(1, 0, 0.5, 0)
 TestGui.TextBox.Selectable = true
 TestGui.TextBox.Size = UDim2.new(0.800000012, 0, 1, 0)
 
-TestGui.UICorner_61.CornerRadius = UDim.new(0.25, 0)
-TestGui.UICorner_61.Parent = TestGui.TextBox
+TestGui.UICorner_69.CornerRadius = UDim.new(0.25, 0)
+TestGui.UICorner_69.Parent = TestGui.TextBox
 
 TestGui.input.Name = "input"
 TestGui.input.Parent = TestGui.TextBox
@@ -3366,8 +3753,8 @@ TestGui.TextBox_2.Position = UDim2.new(1, 0, 0.5, 0)
 TestGui.TextBox_2.Selectable = true
 TestGui.TextBox_2.Size = UDim2.new(0.75, 0, 1, 0)
 
-TestGui.UICorner_62.CornerRadius = UDim.new(0.25, 0)
-TestGui.UICorner_62.Parent = TestGui.TextBox_2
+TestGui.UICorner_70.CornerRadius = UDim.new(0.25, 0)
+TestGui.UICorner_70.Parent = TestGui.TextBox_2
 
 TestGui.input_2.Name = "input"
 TestGui.input_2.Parent = TestGui.TextBox_2
@@ -3385,8 +3772,8 @@ TestGui.input_2.TextScaled = true
 TestGui.input_2.TextSize = 14.000
 TestGui.input_2.TextWrapped = true
 
-TestGui.UICorner_63.CornerRadius = UDim.new(0.25, 0)
-TestGui.UICorner_63.Parent = TestGui.R
+TestGui.UICorner_71.CornerRadius = UDim.new(0.25, 0)
+TestGui.UICorner_71.Parent = TestGui.R
 
 TestGui.UIListLayout_2.Parent = TestGui.RGB
 TestGui.UIListLayout_2.FillDirection = Enum.FillDirection.Horizontal
@@ -3426,8 +3813,8 @@ TestGui.TextBox_3.Position = UDim2.new(1, 0, 0.5, 0)
 TestGui.TextBox_3.Selectable = true
 TestGui.TextBox_3.Size = UDim2.new(0.75, 0, 1, 0)
 
-TestGui.UICorner_64.CornerRadius = UDim.new(0.25, 0)
-TestGui.UICorner_64.Parent = TestGui.TextBox_3
+TestGui.UICorner_72.CornerRadius = UDim.new(0.25, 0)
+TestGui.UICorner_72.Parent = TestGui.TextBox_3
 
 TestGui.input_3.Name = "input"
 TestGui.input_3.Parent = TestGui.TextBox_3
@@ -3445,8 +3832,8 @@ TestGui.input_3.TextScaled = true
 TestGui.input_3.TextSize = 14.000
 TestGui.input_3.TextWrapped = true
 
-TestGui.UICorner_65.CornerRadius = UDim.new(0.25, 0)
-TestGui.UICorner_65.Parent = TestGui.G
+TestGui.UICorner_73.CornerRadius = UDim.new(0.25, 0)
+TestGui.UICorner_73.Parent = TestGui.G
 
 TestGui.B.Name = "B"
 TestGui.B.Parent = TestGui.RGB
@@ -3479,8 +3866,8 @@ TestGui.TextBox_4.Position = UDim2.new(1, 0, 0.5, 0)
 TestGui.TextBox_4.Selectable = true
 TestGui.TextBox_4.Size = UDim2.new(0.75, 0, 1, 0)
 
-TestGui.UICorner_66.CornerRadius = UDim.new(0.25, 0)
-TestGui.UICorner_66.Parent = TestGui.TextBox_4
+TestGui.UICorner_74.CornerRadius = UDim.new(0.25, 0)
+TestGui.UICorner_74.Parent = TestGui.TextBox_4
 
 TestGui.input_4.Name = "input"
 TestGui.input_4.Parent = TestGui.TextBox_4
@@ -3498,8 +3885,8 @@ TestGui.input_4.TextScaled = true
 TestGui.input_4.TextSize = 14.000
 TestGui.input_4.TextWrapped = true
 
-TestGui.UICorner_67.CornerRadius = UDim.new(0.25, 0)
-TestGui.UICorner_67.Parent = TestGui.B
+TestGui.UICorner_75.CornerRadius = UDim.new(0.25, 0)
+TestGui.UICorner_75.Parent = TestGui.B
 
 TestGui.UIAspectRatioConstraint_3.Parent = TestGui.RGB
 TestGui.UIAspectRatioConstraint_3.AspectRatio = 10.000
@@ -3530,14 +3917,15 @@ TestGui.pre.BorderColor3 = Color3.fromRGB(27, 42, 53)
 TestGui.pre.Position = UDim2.new(0.499998927, 0, 0.356097847, 0)
 TestGui.pre.Size = UDim2.new(1.85185194, 0, 0.719864368, 0)
 
-TestGui.UICorner_68.CornerRadius = UDim.new(0, 3)
-TestGui.UICorner_68.Parent = TestGui.pre
+TestGui.UICorner_76.CornerRadius = UDim.new(0, 3)
+TestGui.UICorner_76.Parent = TestGui.pre
 
 TestGui.UIPadding_2.Parent = TestGui.preview
 TestGui.UIPadding_2.PaddingBottom = UDim.new(0.0500000007, 0)
 TestGui.UIPadding_2.PaddingLeft = UDim.new(0.0500000007, 0)
 TestGui.UIPadding_2.PaddingRight = UDim.new(0.0500000007, 0)
 TestGui.UIPadding_2.PaddingTop = UDim.new(0.0500000007, 0)
+
 
 --special
 TestGui.Instances.Name = "Instances"
@@ -3615,6 +4003,60 @@ TestGui.ButtonsSettings4TextLabel1.TextTransparency = 1
 TestGui.ButtonsSettings4TextLabel1.Visible = false
 TestGui.ButtonsSettings4TextLabel1.Parent = TestGui.MainBackgroundFrame.Instances.ButtonsSettings4TextValue
 
+TestGui.ButtonsSettings5Value.Name = "ButtonsSettings5Value"
+TestGui.ButtonsSettings5Value.Value = 1
+TestGui.ButtonsSettings5Value.Parent = TestGui.MainBackgroundFrame.Instances
+
+TestGui.ButtonsSettings5TextValue.Name = "ButtonsSettings5TextValue"
+TestGui.ButtonsSettings5TextValue.Value = 1
+TestGui.ButtonsSettings5TextValue.Parent = TestGui.MainBackgroundFrame.Instances
+
+TestGui.ButtonsSettings5TextLabel.Name = "ButtonsSettings5TextLabel"
+TestGui.ButtonsSettings5TextLabel.TextTransparency = 1
+TestGui.ButtonsSettings5TextLabel.Visible = false
+TestGui.ButtonsSettings5TextLabel.Parent = TestGui.MainBackgroundFrame.Instances.ButtonsSettings5Value
+
+TestGui.ButtonsSettings5TextLabel1.Name = "ButtonsSettings5TextLabel1"
+TestGui.ButtonsSettings5TextLabel1.TextTransparency = 1
+TestGui.ButtonsSettings5TextLabel1.Visible = false
+TestGui.ButtonsSettings5TextLabel1.Parent = TestGui.MainBackgroundFrame.Instances.ButtonsSettings5TextValue
+
+TestGui.ButtonsSettings6Value.Name = "ButtonsSettings6Value"
+TestGui.ButtonsSettings6Value.Value = 1
+TestGui.ButtonsSettings6Value.Parent = TestGui.MainBackgroundFrame.Instances
+
+TestGui.ButtonsSettings6TextValue.Name = "ButtonsSettings6TextValue"
+TestGui.ButtonsSettings6TextValue.Value = 1
+TestGui.ButtonsSettings6TextValue.Parent = TestGui.MainBackgroundFrame.Instances
+
+TestGui.ButtonsSettings6TextLabel.Name = "ButtonsSettings6TextLabel"
+TestGui.ButtonsSettings6TextLabel.TextTransparency = 1
+TestGui.ButtonsSettings6TextLabel.Visible = false
+TestGui.ButtonsSettings6TextLabel.Parent = TestGui.MainBackgroundFrame.Instances.ButtonsSettings6Value
+
+TestGui.ButtonsSettings6TextLabel1.Name = "ButtonsSettings6TextLabel1"
+TestGui.ButtonsSettings6TextLabel1.TextTransparency = 1
+TestGui.ButtonsSettings6TextLabel1.Visible = false
+TestGui.ButtonsSettings6TextLabel1.Parent = TestGui.MainBackgroundFrame.Instances.ButtonsSettings6TextValue
+
+TestGui.ButtonsSettings7Value.Name = "ButtonsSettings7Value"
+TestGui.ButtonsSettings7Value.Value = 1
+TestGui.ButtonsSettings7Value.Parent = TestGui.MainBackgroundFrame.Instances
+
+TestGui.ButtonsSettings7TextValue.Name = "ButtonsSettings7TextValue"
+TestGui.ButtonsSettings7TextValue.Value = 1
+TestGui.ButtonsSettings7TextValue.Parent = TestGui.MainBackgroundFrame.Instances
+
+TestGui.ButtonsSettings7TextLabel.Name = "ButtonsSettings7TextLabel"
+TestGui.ButtonsSettings7TextLabel.TextTransparency = 1
+TestGui.ButtonsSettings7TextLabel.Visible = false
+TestGui.ButtonsSettings7TextLabel.Parent = TestGui.MainBackgroundFrame.Instances.ButtonsSettings7Value
+
+TestGui.ButtonsSettings7TextLabel1.Name = "ButtonsSettings7TextLabel1"
+TestGui.ButtonsSettings7TextLabel1.TextTransparency = 1
+TestGui.ButtonsSettings7TextLabel1.Visible = false
+TestGui.ButtonsSettings7TextLabel1.Parent = TestGui.MainBackgroundFrame.Instances.ButtonsSettings7TextValue
+
 warn("ran success")
 --[Settings]--
 local SkipLoading = false--skips loading screen
@@ -3630,7 +4072,7 @@ local versionScript = 1.06 --dont play with this or something can broke
 		    EnabledAdvanced = false;
 			TeamCheck = false;
 		    RayCasting = false;
-		    AutoAimBot = true;
+		    AutoAimBot = false;
 
 			ShowFov = false;
 			Fov = 0;
@@ -3661,6 +4103,33 @@ local versionScript = 1.06 --dont play with this or something can broke
 		KeybindActivate = "Enum.KeyCode.T";
 		KeybindEnabled = false;
 	};
+	OutlinesHE = {
+		Enabled = false;
+		TeamCheck = false;
+		TeamColor = false;
+		AllwaysShow = false;
+		
+		KeybindActivate = "Enum.KeyCode.B";
+		KeybindEnabled = false;
+
+		OutlineColor = Color3.fromRGB(255,255,255);
+		Ourlinetransparency = 0;
+
+		FillColor = Color3.fromRGB(0,100,100);
+		FillTransparency = 0.5;
+	};
+	HitboxExtender ={
+		Enabled  = false;
+		Teamcheck = true;
+		TeamColor = false;
+		HitboxPart = "Head"; 
+		HitboxColor = Color3.fromRGB(0,100,100);
+		
+		KeybindActivate = "Enum.KeyCode.V";
+		KeybindEnabled = false;
+
+		Material = "ForceField";
+	};
 	AntiLock= {
 		Enabled = false;
 
@@ -3683,9 +4152,9 @@ local versionScript = 1.06 --dont play with this or something can broke
 		
 			Box = {
 				Box = false;
-				Name = false;
-				Distance = false;
-				Health = false;
+				Name = true;
+				Distance = true;
+				Health = true;
 
 				TeamCheck = false;
 
@@ -3694,7 +4163,7 @@ local versionScript = 1.06 --dont play with this or something can broke
 				BoxColor = Color3.fromRGB(75,0,10);
 			};
 			OutLines = {
-				Enabled = false;
+				Enabled = true;
 				TeamCheck = false;
 				TeamColor = false;
 
@@ -3708,11 +4177,11 @@ local versionScript = 1.06 --dont play with this or something can broke
 			};
 			Tracers = {
 				Enabled = false;
-				TeamCheck = false;
+				TeamChec = false;
 			    TeamColor = false;
 			
 			    KeybindEnabled = false;
-			KeybindActivate = "Enum.KeyCode.K";
+			    KeybindActivate = "Enum.KeyCode.K";
 			
 				Color = Color3.fromRGB(75,0,10);
 			}
@@ -3721,7 +4190,8 @@ local versionScript = 1.06 --dont play with this or something can broke
 	
 --\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\--
 
-local ss = Enum.KeyCode.K
+
+
 --local MainGui = 
 local Button1SettingsValue = false
 local Button2SettingsValue = false
@@ -3760,7 +4230,7 @@ local Fov = Instance.new("ScreenGui")Fov.Name = "Fov" Fov.Parent = game.Players.
 local TracersG = Instance.new("ScreenGui")TracersG.Name = "Tracers" TracersG.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui") TracersG.ZIndexBehavior = Enum.ZIndexBehavior.Sibling TracersG.ResetOnSpawn = false
 local FOVFFrame = Instance.new("Frame")FOVFFrame.Parent = Fov FOVFFrame.Name = "FOVFFrame" FOVFFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255) FOVFFrame.BorderColor3 = Color3.fromRGB(0, 0, 0) FOVFFrame.BorderSizePixel = 0 FOVFFrame.BackgroundTransparency = 1 FOVFFrame.AnchorPoint = Vector2.new(0.5, 0.5) FOVFFrame.Position = UDim2.new(0.5, 0,0.5, 0) FOVFFrame.Size = UDim2.new(0, Configs.Aimbot.Fov, 0, Configs.Aimbot.Fov) FOVFFrame.BackgroundTransparency = 1 
 local UICorner = Instance.new("UICorner")UICorner.CornerRadius = UDim.new(1, 0) UICorner.Parent = FOVFFrame 
-local UIStroke = Instance.new("UIStroke")UIStroke.Color = Color3.fromRGB(100,0,100) UIStroke.Parent = FOVFFrame UIStroke.Thickness = 1 UIStroke.ApplyStrokeMode = "Border" --[[game:GetService("StarterGui"):SetCore("SendNotification", {Title = "https://discord.gg/FsApQ7YNTq", Text = "The Discord For More!"})--]]
+local UIStroke = Instance.new("UIStroke")UIStroke.Color = Color3.fromRGB(100,0,100) UIStroke.Parent = FOVFFrame UIStroke.Thickness = 1 UIStroke.ApplyStrokeMode = "Border"
 local BoxC = Instance.new("ScreenGui", game.Workspace) BoxC.Name = "Box"
 local Higlight = Instance.new("ScreenGui",game.Workspace)
 local connections = {}
@@ -3888,6 +4358,12 @@ local function AddHighlight(plr)
 	end)
 	coroutine.resume(co)
 end
+for i,plr in pairs(game.Players:GetChildren()) do
+	AddTracers(plr)
+end
+game.Players.PlayerAdded:Connect(function(plr)
+	AddTracers(plr)
+end)
 
 local function AddBox(player)
 	local bbg = Instance.new("BillboardGui", BoxC)
@@ -4127,6 +4603,87 @@ local function aimAt(pos, smooth)
 		CurrentCam.CFrame = CFrame.lookAt(CurrentCam.CFrame.Position, LookAt)
 	end
 end
+
+--chams
+local Storage = Instance.new("Folder", game:GetService("StarterGui")) Storage.Name ="/Outlines"
+local function Highlight(plr)
+	local Highlight = Instance.new("Highlight")
+	Highlight.Parent = Storage
+	Highlight.Name = plr.Name
+	Highlight.OutlineTransparency= 0
+	Highlight.OutlineColor = Configs.OutlinesHE.OutlineColor
+	Highlight.Enabled = Configs.OutlinesHE.Enabled
+	local plrchar = plr.Character
+	if plrchar then
+		Highlight.Adornee = plrchar
+	end
+	connections[plr] = plr.CharacterAdded:Connect(function(char)
+		Highlight.Adornee = char
+	end)
+	local co = coroutine.create(function()
+		while wait(0.1) do
+			if (plr.Character and plr.Character:FindFirstChild"HumanoidRootPart") and plr.Character.Humanoid.Health > 0 then
+				if Configs.OutlinesHE.Enabled == true then 
+					if Configs.OutlinesHE.TeamCheck == true then
+						if plr.Team == player.Team then
+							Highlight.Enabled = false
+						else
+							Highlight.Enabled = true
+						end
+					else
+						Highlight.Enabled = true
+					end
+				else
+					Highlight.Enabled = false
+				end
+
+				if Configs.OutlinesHE.TeamColor == true then
+					Highlight.OutlineColor = plr.TeamColor.Color 
+				else
+					Highlight.OutlineColor = Configs.OutlinesHE.OutlineColor
+				end
+
+				if Configs.OutlinesHE.AllwaysShow == true then
+					Highlight.DepthMode = "Occluded" 
+				else
+					Highlight.DepthMode = "AlwaysOnTop"
+				end
+				-- By Mick Gordon
+				Highlight.FillColor = Configs.OutlinesHE.FillColor
+				Highlight.FillTransparency = Configs.OutlinesHE.FillTransparency
+				Highlight.OutlineTransparency = Configs.OutlinesHE.Ourlinetransparency
+
+				if not (game:GetService"Players":FindFirstChild(plr.Name)) then
+					Storage:FindFirstChild(plr.Name):Destroy()
+					coroutine.yield()
+				end
+			else
+				Highlight.Enabled = false
+			end
+		end
+	end)
+	coroutine.resume(co)
+end
+do
+	wait(2)
+
+	--initial player addition
+	for _,v in pairs(game:GetService("Players"):GetChildren()) do
+		if not (v.Name == player.Name) then
+			if not (Storage:FindFirstChild(v.Name)) then
+				Highlight(v)
+			end
+		end
+	end
+end
+--[[for _,v in pairs(game:GetService("Players"):GetChildren()) do
+	if not (v.Name == player.Name) then
+		if not (Storage:FindFirstChild(v.Name)) then
+			Highlight(v)
+		end
+	end
+end--]]
+
 
 --key toggle
 local userInputService = game:GetService("UserInputService")
@@ -4646,7 +5203,7 @@ userInputService.InputBegan:Connect(function(input)
 		if Configs.ESP.KeybindEnabled == true then
 			if userInputService:GetFocusedTextBox() ~= nil then return end
 			if Configs.ESP.Enabled == true then
-				MainGui.MainMiddleButtons.Section2Gui.Button2Background.Button1.ImageButton1:TweenPosition(--Timer
+				MainGui.MainMiddleButtons.Section2Gui.Button6Background.Button1.ImageButton1:TweenPosition(--Timer
 					UDim2.new(0, 2,-0.667, 0),
 					"Out",
 					"Quad",
@@ -4737,18 +5294,42 @@ MainGui.DownGui.ButtonsListOfSettings.Button4Settings1.Text1.MouseButton1Click:C
 		MainGui.DownGui.ButtonsListOfSettings.Button4Settings1.Text2.Text = "Selected: "..Configs.ESP.Tracers.KeybindActivate.Name
 	end
 end)
---[[MainGui.DownGui.ButtonsListOfSettings.Button2Settings1.Text1.MouseButton1Click:Connect(function()
+MainGui.DownGui.ButtonsListOfSettings.Button2Settings1.Text1.MouseButton1Click:Connect(function()
 	MainGui.DownGui.ButtonsListOfSettings.Button2Settings1.Text2.Text = "Selected: ".."?"
 	local input = userInputService.InputBegan:Wait()
 	local keyCode = input.KeyCode
 	if keyCode ~= Enum.KeyCode.Unknown and keyCode ~= Enum.KeyCode.Backspace then
 		if userInputService:GetFocusedTextBox() ~= nil then return end
-		inputAimAssist = keyCode
-		MainGui.DownGui.ButtonsListOfSettings.Button2Settings1.Text2.Text = "Selected: "..inputAimAssist.Name
+		Configs.Peakassist.KeybindActivate = keyCode
+		MainGui.DownGui.ButtonsListOfSettings.Button2Settings1.Text2.Text = "Selected: "..Configs.Peakassist.KeybindActivate .Name
 	else
-		MainGui.DownGui.ButtonsListOfSettings.Button2Settings1.Text2.Text = "Selected: "..inputAimAssist.Name
+		MainGui.DownGui.ButtonsListOfSettings.Button2Settings1.Text2.Text = "Selected: "..Configs.Peakassist.KeybindActivate .Name
 	end
-end)--]]
+end)
+MainGui.DownGui.ButtonsListOfSettings.Button3Settings1.Text1.MouseButton1Click:Connect(function()
+	MainGui.DownGui.ButtonsListOfSettings.Button3Settings1.Text2.Text = "Selected: ".."?"
+	local input = userInputService.InputBegan:Wait()
+	local keyCode = input.KeyCode
+	if keyCode ~= Enum.KeyCode.Unknown and keyCode ~= Enum.KeyCode.Backspace then
+		if userInputService:GetFocusedTextBox() ~= nil then return end
+		Configs.ESP.KeybindActivate = keyCode
+		MainGui.DownGui.ButtonsListOfSettings.Button3Settings1.Text2.Text = "Selected: "..Configs.ESP.KeybindActivate .Name
+	else
+		MainGui.DownGui.ButtonsListOfSettings.Button3Settings1.Text2.Text = "Selected: "..Configs.ESP.KeybindActivate .Name
+	end
+end)
+MainGui.DownGui.ButtonsListOfSettings.Button4Settings1.Text1.MouseButton1Click:Connect(function()
+	MainGui.DownGui.ButtonsListOfSettings.Button4Settings1.Text2.Text = "Selected: ".."?"
+	local input = userInputService.InputBegan:Wait()
+	local keyCode = input.KeyCode
+	if keyCode ~= Enum.KeyCode.Unknown and keyCode ~= Enum.KeyCode.Backspace then
+		if userInputService:GetFocusedTextBox() ~= nil then return end
+		Configs.ESP.Tracers.KeybindActivate = keyCode
+		MainGui.DownGui.ButtonsListOfSettings.Button4Settings1.Text2.Text = "Selected: "..Configs.ESP.Tracers.KeybindActivate .Name
+	else
+		MainGui.DownGui.ButtonsListOfSettings.Button4Settings1.Text2.Text = "Selected: "..Configs.ESP.Tracers.KeybindActivate .Name
+	end
+end)
 
 --AIMBOT SCRIPT--
 local NoKillList={HELENERA_20=true,xXxMoNkEyMaNxXx=true,zimbabwe0=true}
@@ -4846,9 +5427,8 @@ local function adjustVelocity()
 	rootPart.Velocity = Vector3.new(oldVelocity.X, val, oldVelocity.Z)
 	player.Character.Humanoid.HipHeight = hip
 end
-local KeyCode = Enum.KeyCode.Z
 local function onInputBegan(input)
-	if input.KeyCode == KeyCode and not game:GetService('UserInputService'):GetFocusedTextBox() then
+	if input.KeyCode == Configs.AntiLock.KeybindActivate and not game:GetService('UserInputService'):GetFocusedTextBox() then
 		Configs.AntiLock.Enabled = not Configs.AntiLock.Enabled
 		if Configs.AntiLock.Enabled then
 		while Configs.AntiLock.Enabled do
@@ -4978,6 +5558,12 @@ MainGui.MainMiddleButtons.Section2Gui.Button5Background.Button1.ImageButton2.Mou
 	)
 	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button5Background.Button1.ImageButton1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(0, 0, 0)}):Play()
 	Configs.ESP.Tracers.Enabled=true
+	for i,plr in pairs(game.Players:GetChildren()) do
+		AddTracers(plr)
+	end
+	game.Players.PlayerAdded:Connect(function(plr)
+		AddTracers(plr)
+	end)
 	--[[for _, GPlayer in pairs(game.Players:GetPlayers()) do
 		local ESP = Instance.new('Highlight',GPlayer.Character)
 		ESP.FillColor = TracersFillColor
@@ -5036,8 +5622,9 @@ MainGui.MainMiddleButtons.Section2Gui.Button6Background.Button1.ImageButton2.Mou
 	end
 
 
-	local function ESP(plr)
+local function ESP(plr)
 		task.spawn(function()
+			wait(0.01)
 			for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
 				if v.Name == plr.Name..'_ESP' then
 					v:Destroy()
@@ -5442,6 +6029,45 @@ MainGui.DownGui.ButtonsListOfSettings.Button2Settings1.Button1.ImageButton1.Mous
 	Configs.Peakassist.KeybindEnabled = false
 end)
 
+MainGui.DownGui.ButtonsListOfSettings.Button3Settings1.Button1.ImageButton2.MouseButton1Click:Connect(function()
+	MainGui.DownGui.ButtonsListOfSettings.Button3Settings1.Button1.ImageButton1:TweenPosition(--Timer
+		UDim2.new(0, 2,0.074, 0),
+		"Out",
+		"Quad",
+		0.2,
+		false
+	)
+	game:GetService("TweenService"):Create(MainGui.DownGui.ButtonsListOfSettings.Button3Settings1.Button1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundColor3=Color3.fromRGB(126, 154, 255)}):Play()
+	MainGui.DownGui.ButtonsListOfSettings.Button3Settings1.Button1.ImageButton2:TweenPosition(--Timer
+		UDim2.new(0, 2,0.889, 0),
+		"Out",
+		"Quad",
+		0.2,
+		false
+	)
+	game:GetService("TweenService"):Create(MainGui.DownGui.ButtonsListOfSettings.Button3Settings1.Button1.ImageButton1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(0, 0, 0)}):Play()
+	Configs.ESP.KeybindEnabled = true
+end)
+MainGui.DownGui.ButtonsListOfSettings.Button3Settings1.Button1.ImageButton1.MouseButton1Click:Connect(function()
+	MainGui.DownGui.ButtonsListOfSettings.Button3Settings1.Button1.ImageButton1:TweenPosition(--Timer
+		UDim2.new(0, 2,-0.667, 0),
+		"Out",
+		"Quad",
+		0.2,
+		false
+	)
+	game:GetService("TweenService"):Create(MainGui.DownGui.ButtonsListOfSettings.Button3Settings1.Button1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundColor3=Color3.fromRGB(34, 34, 34)}):Play()
+	MainGui.DownGui.ButtonsListOfSettings.Button3Settings1.Button1.ImageButton2:TweenPosition(--Timer
+		UDim2.new(0, 2,0.074, 0),
+		"Out",
+		"Quad",
+		0.2,
+		false
+	)
+	game:GetService("TweenService"):Create(MainGui.DownGui.ButtonsListOfSettings.Button3Settings1.Button1.ImageButton2,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(126, 112, 167)}):Play()
+	Configs.ESP.KeybindEnabled = false
+end)
+
 MainGui.DownGui.ButtonsListOfSettings.Button3Settings3.Button1.ImageButton2.MouseButton1Click:Connect(function()
 	MainGui.DownGui.ButtonsListOfSettings.Button3Settings3.Button1.ImageButton1:TweenPosition(--Timer
 		UDim2.new(0, 2,0.074, 0),
@@ -5459,7 +6085,7 @@ MainGui.DownGui.ButtonsListOfSettings.Button3Settings3.Button1.ImageButton2.Mous
 		false
 	)
 	game:GetService("TweenService"):Create(MainGui.DownGui.ButtonsListOfSettings.Button3Settings3.Button1.ImageButton1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(0, 0, 0)}):Play()
-	Configs.ESP.Box.Box = true
+	Configs.ESP.Box.TeamCheck = true
 end)
 
 MainGui.DownGui.ButtonsListOfSettings.Button3Settings3.Button1.ImageButton1.MouseButton1Click:Connect(function()
@@ -5479,7 +6105,93 @@ MainGui.DownGui.ButtonsListOfSettings.Button3Settings3.Button1.ImageButton1.Mous
 		false
 	)
 	game:GetService("TweenService"):Create(MainGui.DownGui.ButtonsListOfSettings.Button3Settings3.Button1.ImageButton2,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(126, 112, 167)}):Play()
+	Configs.ESP.Box.TeamCheck = false
+end)
+
+MainGui.DownGui.ButtonsListOfSettings.Button3Settings4.Button1.ImageButton2.MouseButton1Click:Connect(function()
+	MainGui.DownGui.ButtonsListOfSettings.Button3Settings4.Button1.ImageButton1:TweenPosition(--Timer
+		UDim2.new(0, 2,0.074, 0),
+		"Out",
+		"Quad",
+		0.2,
+		false
+	)
+	game:GetService("TweenService"):Create(MainGui.DownGui.ButtonsListOfSettings.Button3Settings4.Button1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundColor3=Color3.fromRGB(126, 154, 255)}):Play()
+	MainGui.DownGui.ButtonsListOfSettings.Button3Settings4.Button1.ImageButton2:TweenPosition(--Timer
+		UDim2.new(0, 2,0.889, 0),
+		"Out",
+		"Quad",
+		0.2,
+		false
+	)
+	game:GetService("TweenService"):Create(MainGui.DownGui.ButtonsListOfSettings.Button3Settings4.Button1.ImageButton1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(0, 0, 0)}):Play()
+	Configs.ESP.Box.Box = true
+	for i,plr in pairs(game.Players:GetChildren()) do
+		AddHighlight(plr)
+		AddBox(plr)
+	end
+	game.Players.PlayerAdded:Connect(function(plr)
+		AddHighlight(plr)
+		AddBox(plr)
+	end)
+end)
+
+MainGui.DownGui.ButtonsListOfSettings.Button3Settings4.Button1.ImageButton1.MouseButton1Click:Connect(function()
+	MainGui.DownGui.ButtonsListOfSettings.Button3Settings4.Button1.ImageButton1:TweenPosition(--Timer
+		UDim2.new(0, 2,-0.667, 0),
+		"Out",
+		"Quad",
+		0.2,
+		false
+	)
+	game:GetService("TweenService"):Create(MainGui.DownGui.ButtonsListOfSettings.Button3Settings4.Button1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundColor3=Color3.fromRGB(34, 34, 34)}):Play()
+	MainGui.DownGui.ButtonsListOfSettings.Button3Settings4.Button1.ImageButton2:TweenPosition(--Timer
+		UDim2.new(0, 2,0.074, 0),
+		"Out",
+		"Quad",
+		0.2,
+		false
+	)
+	game:GetService("TweenService"):Create(MainGui.DownGui.ButtonsListOfSettings.Button3Settings4.Button1.ImageButton2,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(126, 112, 167)}):Play()
 	Configs.ESP.Box.Box = false
+end)
+MainGui.DownGui.ButtonsListOfSettings.Button4Settings1.Button1.ImageButton2.MouseButton1Click:Connect(function()
+	MainGui.DownGui.ButtonsListOfSettings.Button4Settings1.Button1.ImageButton1:TweenPosition(--Timer
+		UDim2.new(0, 2,0.074, 0),
+		"Out",
+		"Quad",
+		0.2,
+		false
+	)
+	game:GetService("TweenService"):Create(MainGui.DownGui.ButtonsListOfSettings.Button4Settings1.Button1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundColor3=Color3.fromRGB(126, 154, 255)}):Play()
+	MainGui.DownGui.ButtonsListOfSettings.Button4Settings1.Button1.ImageButton2:TweenPosition(--Timer
+		UDim2.new(0, 2,0.889, 0),
+		"Out",
+		"Quad",
+		0.2,
+		false
+	)
+	game:GetService("TweenService"):Create(MainGui.DownGui.ButtonsListOfSettings.Button4Settings1.Button1.ImageButton1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(0, 0, 0)}):Play()
+	Configs.ESP.Tracers.KeybindEnabled = true
+end)
+MainGui.DownGui.ButtonsListOfSettings.Button4Settings1.Button1.ImageButton1.MouseButton1Click:Connect(function()
+	MainGui.DownGui.ButtonsListOfSettings.Button4Settings1.Button1.ImageButton1:TweenPosition(--Timer
+		UDim2.new(0, 2,-0.667, 0),
+		"Out",
+		"Quad",
+		0.2,
+		false
+	)
+	game:GetService("TweenService"):Create(MainGui.DownGui.ButtonsListOfSettings.Button4Settings1.Button1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundColor3=Color3.fromRGB(34, 34, 34)}):Play()
+	MainGui.DownGui.ButtonsListOfSettings.Button4Settings1.Button1.ImageButton2:TweenPosition(--Timer
+		UDim2.new(0, 2,0.074, 0),
+		"Out",
+		"Quad",
+		0.2,
+		false
+	)
+	game:GetService("TweenService"):Create(MainGui.DownGui.ButtonsListOfSettings.Button4Settings1.Button1.ImageButton2,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(126, 112, 167)}):Play()
+	Configs.ESP.Tracers.KeybindEnabled = false
 end)
 
 MainGui.DownGui.ButtonsListOfSettings.Button3Settings3.Button1.ImageButton1.MouseButton1Click:Connect(function()
@@ -5529,10 +6241,19 @@ MainGui.MainMiddleButtons.Section1Gui.Button1Background.Text1.MouseButton1Click:
 		MainGui.DownGui.ButtonsListOfSettings.Button1Settings2.Visible = true
 		MainGui.DownGui.ButtonsListOfSettings.Button1Settings3.Visible = true
 		MainGui.DownGui.ButtonsListOfSettings.Button1Settings4.Visible = true
+		MainGui.DownGui.ButtonsListOfSettings.Button1Settings5.Visible = true
 		MainGui.DownGui.ButtonsListOfSettings.Button2Settings1.Visible = false
 		MainGui.DownGui.ButtonsListOfSettings.Button3Settings1.Visible = false
 		MainGui.DownGui.ButtonsListOfSettings.Button3Settings2.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button3Settings3.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button3Settings4.Visible = false
 		MainGui.DownGui.ButtonsListOfSettings.Button4Settings1.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button4Settings2.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button4Settings3.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button4Settings4.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button5Settings1.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button6Settings1.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button7Settings1.Visible = false
 		MainGui.DownGui.ButtonsListOfSettings.Visible=true
 		game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings2Value.ButtonsSettings2TextLabel,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play() 
 		game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings2TextValue.ButtonsSettings2TextLabel1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play()
@@ -5605,10 +6326,19 @@ MainGui.MainMiddleButtons.Section1Gui.Button2Background.Text1.MouseButton1Click:
 		MainGui.DownGui.ButtonsListOfSettings.Button1Settings2.Visible = false
 		MainGui.DownGui.ButtonsListOfSettings.Button1Settings3.Visible = false
 		MainGui.DownGui.ButtonsListOfSettings.Button1Settings4.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button1Settings5.Visible = false
 		MainGui.DownGui.ButtonsListOfSettings.Button2Settings1.Visible = true
 		MainGui.DownGui.ButtonsListOfSettings.Button3Settings1.Visible = false
 		MainGui.DownGui.ButtonsListOfSettings.Button3Settings2.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button3Settings3.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button3Settings4.Visible = false
 		MainGui.DownGui.ButtonsListOfSettings.Button4Settings1.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button4Settings2.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button4Settings3.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button4Settings4.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button5Settings1.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button6Settings1.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button7Settings1.Visible = false
 		MainGui.DownGui.ButtonsListOfSettings.Visible=true
 		game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings1Value.ButtonsSettings1TextLabel,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play() 
 		game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings1TextValue.ButtonsSettings1TextLabel1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play()
@@ -5659,6 +6389,77 @@ MainGui.MainMiddleButtons.Section1Gui.Button2Background.Text1.MouseButton1Click:
 		Button2SettingsValue=false
 	end
 end)
+MainGui.MainMiddleButtons.Section2Gui.Button5Background.Text1.MouseButton1Click:Connect(function()
+	if Button4SettingsValue==false then
+		Button4SettingsValue=true
+		MainGui.DownGui.ButtonsListOfSettings.Button1Settings.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button1Settings1.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button1Settings2.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button1Settings3.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button1Settings4.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button1Settings5.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button2Settings1.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button3Settings1.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button3Settings2.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button3Settings3.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button3Settings4.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button4Settings1.Visible = true
+		MainGui.DownGui.ButtonsListOfSettings.Button4Settings2.Visible = true
+		MainGui.DownGui.ButtonsListOfSettings.Button4Settings3.Visible = true
+		MainGui.DownGui.ButtonsListOfSettings.Button4Settings4.Visible = true
+		MainGui.DownGui.ButtonsListOfSettings.Button5Settings1.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button6Settings1.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button7Settings1.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Visible=true
+		game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings1Value.ButtonsSettings1TextLabel,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play() 
+		game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings1TextValue.ButtonsSettings1TextLabel1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play()
+		game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings2Value.ButtonsSettings2TextLabel,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play() 
+		game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings2TextValue.ButtonsSettings2TextLabel1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play()
+		game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings3Value.ButtonsSettings3TextLabel,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play() 
+		game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings3TextValue.ButtonsSettings3TextLabel1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play()
+		wait(0.1)
+		MainGui.DownGui.ButtonsListOfSettings:TweenPosition(--Timer
+			UDim2.new(0.138, 0,-3.36, 0),
+			"Out",
+			"Quad",
+			0.2,
+			false
+		)
+		MainGui.DownGui.ButtonsListOfSettings:TweenSize(--Timer
+			UDim2.new(0, 604,0, 118),
+			"Out",
+			"Quad",
+			0.2,
+			false
+		)
+		wait(0.4)
+		game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings4Value.ButtonsSettings4TextLabel,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 0}):Play() 
+		game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings4TextValue.ButtonsSettings4TextLabel1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 0.8}):Play()
+	else
+		game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings3Value.ButtonsSettings3TextLabel,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play() 
+		game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings3TextValue.ButtonsSettings3TextLabel1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play()
+		game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings1Value.ButtonsSettings1TextLabel,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play() 
+		game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings1TextValue.ButtonsSettings1TextLabel1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play()
+		wait(0.5)
+		MainGui.DownGui.ButtonsListOfSettings:TweenSize(--Timer
+			UDim2.new(0, 604,-0, 0),
+			"Out",
+			"Quad",
+			0.2,
+			false
+		)
+		MainGui.DownGui.ButtonsListOfSettings:TweenPosition(--Timer
+			UDim2.new(0.138, 0,-0.225, 0),
+			"Out",
+			"Quad",
+			0.2,
+			false
+		)
+		wait(0.2)
+		MainGui.DownGui.ButtonsListOfSettings.Visible=false
+		Button4SettingsValue=false
+	end
+end)
 MainGui.MainMiddleButtons.Section2Gui.Button6Background.Text1.MouseButton1Click:Connect(function()
 	if Button3SettingsValue==false then
 		Button3SettingsValue=true
@@ -5667,10 +6468,19 @@ MainGui.MainMiddleButtons.Section2Gui.Button6Background.Text1.MouseButton1Click:
 		MainGui.DownGui.ButtonsListOfSettings.Button1Settings2.Visible = false
 		MainGui.DownGui.ButtonsListOfSettings.Button1Settings3.Visible = false
 		MainGui.DownGui.ButtonsListOfSettings.Button1Settings4.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button1Settings5.Visible = false
 		MainGui.DownGui.ButtonsListOfSettings.Button2Settings1.Visible = false
 		MainGui.DownGui.ButtonsListOfSettings.Button3Settings1.Visible = true
 		MainGui.DownGui.ButtonsListOfSettings.Button3Settings2.Visible = true
+		MainGui.DownGui.ButtonsListOfSettings.Button3Settings3.Visible = true
+		MainGui.DownGui.ButtonsListOfSettings.Button3Settings4.Visible = true
 		MainGui.DownGui.ButtonsListOfSettings.Button4Settings1.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button4Settings2.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button4Settings3.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button4Settings4.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button5Settings1.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button6Settings1.Visible = false
+		MainGui.DownGui.ButtonsListOfSettings.Button7Settings1.Visible = false
 		MainGui.DownGui.ButtonsListOfSettings.Visible=true
 		game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings1Value.ButtonsSettings1TextLabel,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play() 
 		game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings1TextValue.ButtonsSettings1TextLabel1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play()
@@ -5763,6 +6573,8 @@ end)
 MainGui.SideGui.Buttons.SideButton1.Button1Side.MouseButton1Click:Connect(function()
 	AimbotFrame=true
 	PeakAssistFrame=false
+	RenderFrame=false
+	SettingsFrame=false
 	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundColor3=Color3.fromRGB(29, 32, 54)}):Play()
 	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency=0}):Play()
 	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton1.Button1Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(68, 48, 95)}):Play()
@@ -5771,9 +6583,19 @@ MainGui.SideGui.Buttons.SideButton1.Button1Side.MouseButton1Click:Connect(functi
 	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton2,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency=0.6}):Play()
 	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton2.Button2Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(93, 69, 95)}):Play()
 	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton2.Button2Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageTransparency=0.6}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton3,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundColor3=Color3.fromRGB(29, 32, 54)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton3,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency=0.6}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton3.Button3Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(93, 69, 95)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton3.Button3Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageTransparency=0.6}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton4,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundColor3=Color3.fromRGB(29, 32, 54)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton4,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency=0.6}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton4.Button4Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(93, 69, 95)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton4.Button4Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageTransparency=0.6}):Play()
 	--visibility
 	MainGui.MainMiddleButtons.Section1Gui.Visible = true
 	MainGui.MainMiddleButtons.Section2Gui.Visible = false
+	MainGui.MainMiddleButtons.Section3Gui.Visible = false
+	MainGui.MainMiddleButtons.Section4Gui.Visible = false
 	--
 	game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings3Value.ButtonsSettings3TextLabel,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play() 
 	game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings3TextValue.ButtonsSettings3TextLabel1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play()
@@ -5802,10 +6624,15 @@ MainGui.SideGui.Buttons.SideButton1.Button1Side.MouseButton1Click:Connect(functi
 	MainGui.DownGui.ButtonsListOfSettings.Visible=false
 	Button1SettingsValue=false
 	Button2SettingsValue=false
+	Button3SettingsValue=false
+	Button4SettingsValue=false
+	Button5SettingsValue=false
 end)
 MainGui.SideGui.Buttons.SideButton2.Button2Side.MouseButton1Click:Connect(function()
 	AimbotFrame=false
 	PeakAssistFrame=true
+	RenderFrame=false
+	SettingsFrame=false
 	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton2,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundColor3=Color3.fromRGB(29, 32, 54)}):Play()
 	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton2,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency=0}):Play()
 	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton2.Button2Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(68, 48, 95)}):Play()
@@ -5814,9 +6641,19 @@ MainGui.SideGui.Buttons.SideButton2.Button2Side.MouseButton1Click:Connect(functi
 	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency=0.6}):Play()
 	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton1.Button1Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(93, 69, 95)}):Play()
 	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton1.Button1Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageTransparency=0.6}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton3,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundColor3=Color3.fromRGB(29, 32, 54)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton3,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency=0.6}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton3.Button3Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(93, 69, 95)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton3.Button3Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageTransparency=0.6}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton4,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundColor3=Color3.fromRGB(29, 32, 54)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton4,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency=0.6}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton4.Button4Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(93, 69, 95)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton4.Button4Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageTransparency=0.6}):Play()
 	--visibility
 	MainGui.MainMiddleButtons.Section1Gui.Visible = false
 	MainGui.MainMiddleButtons.Section2Gui.Visible = true
+	MainGui.MainMiddleButtons.Section3Gui.Visible = false
+	MainGui.MainMiddleButtons.Section4Gui.Visible = false
 	--
 	game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings3Value.ButtonsSettings3TextLabel,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play() 
 	game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings3TextValue.ButtonsSettings3TextLabel1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play()
@@ -5845,8 +6682,126 @@ MainGui.SideGui.Buttons.SideButton2.Button2Side.MouseButton1Click:Connect(functi
 	MainGui.DownGui.ButtonsListOfSettings.Visible=false
 	Button1SettingsValue=false
 	Button2SettingsValue=false
+	Button3SettingsValue=false
+	Button4SettingsValue=false
+	Button5SettingsValue=false
 end)
-
+MainGui.SideGui.Buttons.SideButton3.Button3Side.MouseButton1Click:Connect(function()
+	AimbotFrame=false
+	PeakAssistFrame=false
+	RenderFrame=true
+	SettingsFrame=false
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton3,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundColor3=Color3.fromRGB(29, 32, 54)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton3,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency=0}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton3.Button3Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(68, 48, 95)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton3.Button3Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageTransparency=0}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundColor3=Color3.fromRGB(29, 32, 54)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency=0.6}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton1.Button1Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(93, 69, 95)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton1.Button1Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageTransparency=0.6}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton2,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundColor3=Color3.fromRGB(29, 32, 54)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton2,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency=0.6}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton2.Button2Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(93, 69, 95)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton2.Button2Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageTransparency=0.6}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton4,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundColor3=Color3.fromRGB(29, 32, 54)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton4,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency=0.6}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton4.Button4Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(93, 69, 95)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton4.Button4Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageTransparency=0.6}):Play()
+	--visibility
+	MainGui.MainMiddleButtons.Section1Gui.Visible = false
+	MainGui.MainMiddleButtons.Section2Gui.Visible = false
+	MainGui.MainMiddleButtons.Section3Gui.Visible = true
+	MainGui.MainMiddleButtons.Section4Gui.Visible = false
+	--
+	game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings3Value.ButtonsSettings3TextLabel,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play() 
+	game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings3TextValue.ButtonsSettings3TextLabel1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play()
+	game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings4Value.ButtonsSettings4TextLabel,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play() 
+	game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings4TextValue.ButtonsSettings4TextLabel1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play()
+	game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings2Value.ButtonsSettings2TextLabel,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play() 
+	game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings2TextValue.ButtonsSettings2TextLabel1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play()
+	game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings1Value.ButtonsSettings1TextLabel,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play() 
+	game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings1TextValue.ButtonsSettings1TextLabel1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play()
+	wait(0.5)
+	MainGui.DownGui.ButtonsListOfSettings:TweenSize(--Timer
+		UDim2.new(0, 604,-0, 0),
+		"Out",
+		"Quad",
+		0.2,
+		false
+	)
+	MainGui.DownGui.ButtonsListOfSettings:TweenPosition(--Timer
+		UDim2.new(0.138, 0,-0.225, 0),
+		"Out",
+		"Quad",
+		0.2,
+		false
+	)
+	wait(0.2)
+	MainGui.DownGui.ButtonsListOfSettings.Visible=false
+	Button1SettingsValue=false
+	Button2SettingsValue=false
+	Button3SettingsValue=false
+	Button4SettingsValue=false
+	Button5SettingsValue=false
+end)
+MainGui.SideGui.Buttons.SideButton4.Button4Side.MouseButton1Click:Connect(function()
+	AimbotFrame=false
+	PeakAssistFrame=false
+	RenderFrame=false
+	SettingsFrame=true
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton4,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundColor3=Color3.fromRGB(29, 32, 54)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton4,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency=0}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton4.Button4Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(68, 48, 95)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton4.Button4Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageTransparency=0}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundColor3=Color3.fromRGB(29, 32, 54)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency=0.6}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton1.Button1Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(93, 69, 95)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton1.Button1Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageTransparency=0.6}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton3,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundColor3=Color3.fromRGB(29, 32, 54)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton3,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency=0.6}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton3.Button3Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(93, 69, 95)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton3.Button3Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageTransparency=0.6}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton2,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundColor3=Color3.fromRGB(29, 32, 54)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton2,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency=0.6}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton2.Button2Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageColor3=Color3.fromRGB(93, 69, 95)}):Play()
+	game:GetService("TweenService"):Create(MainGui.SideGui.Buttons.SideButton2.Button2Side,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{ImageTransparency=0.6}):Play()
+	--visibility
+	MainGui.MainMiddleButtons.Section1Gui.Visible = false
+	MainGui.MainMiddleButtons.Section2Gui.Visible = false
+	MainGui.MainMiddleButtons.Section3Gui.Visible = false
+	MainGui.MainMiddleButtons.Section4Gui.Visible = true
+	--
+	game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings3Value.ButtonsSettings3TextLabel,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play() 
+	game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings3TextValue.ButtonsSettings3TextLabel1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play()
+	game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings4Value.ButtonsSettings4TextLabel,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play() 
+	game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings4TextValue.ButtonsSettings4TextLabel1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play()
+	game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings2Value.ButtonsSettings2TextLabel,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play() 
+	game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings2TextValue.ButtonsSettings2TextLabel1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play()
+	game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings1Value.ButtonsSettings1TextLabel,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play() 
+	game:GetService("TweenService"):Create(TestGui.MainBackgroundFrame.Instances.ButtonsSettings1TextValue.ButtonsSettings1TextLabel1,TweenInfo.new(0.2,Enum.EasingStyle.Linear),{BackgroundTransparency = 1}):Play()
+	wait(0.5)
+	MainGui.DownGui.ButtonsListOfSettings:TweenSize(--Timer
+		UDim2.new(0, 604,-0, 0),
+		"Out",
+		"Quad",
+		0.2,
+		false
+	)
+	MainGui.DownGui.ButtonsListOfSettings:TweenPosition(--Timer
+		UDim2.new(0.138, 0,-0.225, 0),
+		"Out",
+		"Quad",
+		0.2,
+		false
+	)
+	wait(0.2)
+	MainGui.DownGui.ButtonsListOfSettings.Visible=false
+	Button1SettingsValue=false
+	Button2SettingsValue=false
+	Button3SettingsValue=false
+	Button4SettingsValue=false
+	Button5SettingsValue=false
+end)
 
 
 
@@ -5866,10 +6821,179 @@ MainGui.MainMiddleButtons.Section1Gui.Button1Background.Text1.MouseLeave:Connect
 	MainGui.MainMiddleButtons.Section1Gui.Button1Background.Text2.Text="Click for toggle aimbot"
 	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section1Gui.Button1Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
 end)
+MainGui.MainMiddleButtons.Section1Gui.Button2Background.Text1.MouseEnter:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section1Gui.Button2Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section1Gui.Button2Background.Text2.Text="Legit mode"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section1Gui.Button2Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section1Gui.Button2Background.Text1.MouseLeave:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section1Gui.Button2Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section1Gui.Button2Background.Text2.Text="Click for toggle peak"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section1Gui.Button2Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section1Gui.Button16Background.Text1.MouseEnter:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section1Gui.Button16Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section1Gui.Button16Background.Text2.Text="Freeze movement"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section1Gui.Button16Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section1Gui.Button16Background.Text1.MouseLeave:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section1Gui.Button16Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section1Gui.Button16Background.Text2.Text="Click for toggle hitbox"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section1Gui.Button16Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section2Gui.Button14Background.Text1.MouseEnter:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button14Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section2Gui.Button14Background.Text2.Text="allows u to set custom skyboxs"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button14Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section2Gui.Button14Background.Text1.MouseLeave:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button14Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section2Gui.Button14Background.Text2.Text="Click to set custom skybox"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button14Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section2Gui.Button15Background.Text1.MouseEnter:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button15Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section2Gui.Button15Background.Text2.Text="Render trough walls"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button15Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section2Gui.Button15Background.Text1.MouseLeave:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button15Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section2Gui.Button15Background.Text2.Text="Click for toggle Chams"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button15Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section2Gui.Button3Background.Text1.MouseEnter:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button3Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section2Gui.Button3Background.Text2.Text="shows names trough walls"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button3Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section2Gui.Button3Background.Text1.MouseLeave:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button3Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section2Gui.Button3Background.Text2.Text="Click for toggle Tag"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button3Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section2Gui.Button4Background.Text1.MouseEnter:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button4Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section2Gui.Button4Background.Text2.Text="bright no shadows"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button4Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section2Gui.Button4Background.Text1.MouseLeave:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button4Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section2Gui.Button4Background.Text2.Text="Click for toggle Light"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button4Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section2Gui.Button6Background.Text1.MouseEnter:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button6Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section2Gui.Button6Background.Text2.Text="Classic esp"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button6Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section2Gui.Button6Background.Text1.MouseLeave:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button6Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section2Gui.Button6Background.Text2.Text="Click for toggle ESP"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button6Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section3Gui.Button10Background.Text1.MouseEnter:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section3Gui.Button10Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section3Gui.Button10Background.Text2.Text="Allows u jump high"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section3Gui.Button10Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section3Gui.Button10Background.Text1.MouseLeave:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section3Gui.Button10Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section3Gui.Button10Background.Text2.Text="Click for toggle Jump"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section3Gui.Button10Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section3Gui.Button11Background.Text1.MouseEnter:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section3Gui.Button11Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section3Gui.Button11Background.Text2.Text="prevents locking"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section3Gui.Button11Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section3Gui.Button11Background.Text1.MouseLeave:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section3Gui.Button11Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section3Gui.Button11Background.Text2.Text="Click for toggle Antilock"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section3Gui.Button11Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section3Gui.Button7Background.Text1.MouseEnter:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section3Gui.Button7Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section3Gui.Button7Background.Text2.Text="Allows Fly"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section3Gui.Button7Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section3Gui.Button7Background.Text1.MouseLeave:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section3Gui.Button7Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section3Gui.Button7Background.Text2.Text="Click for toggle Fly"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section3Gui.Button7Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section3Gui.Button8Background.Text1.MouseEnter:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section3Gui.Button8Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section3Gui.Button8Background.Text2.Text="walk trough walls"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section3Gui.Button8Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section3Gui.Button8Background.Text1.MouseLeave:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section3Gui.Button8Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section3Gui.Button8Background.Text2.Text="Click for toggle NoClip"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section3Gui.Button8Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section3Gui.Button9Background.Text1.MouseEnter:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section3Gui.Button9Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section3Gui.Button9Background.Text2.Text="custom speed"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section3Gui.Button9Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section3Gui.Button9Background.Text1.MouseLeave:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section3Gui.Button9Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section3Gui.Button9Background.Text2.Text="Click for toggle Speed"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section3Gui.Button9Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section4Gui.Button12Background.Text1.MouseEnter:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section4Gui.Button12Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section4Gui.Button12Background.Text2.Text="fpsboost"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section4Gui.Button12Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section4Gui.Button12Background.Text1.MouseLeave:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section4Gui.Button12Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section4Gui.Button12Background.Text2.Text="Click for toggle boost"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section4Gui.Button12Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section4Gui.Button13Background.Text1.MouseEnter:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section4Gui.Button13Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section4Gui.Button13Background.Text2.Text="adjust camfov"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section4Gui.Button13Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+MainGui.MainMiddleButtons.Section4Gui.Button13Background.Text1.MouseLeave:Connect(function()
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section4Gui.Button13Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
+	wait(0.3)
+	MainGui.MainMiddleButtons.Section4Gui.Button13Background.Text2.Text="Click for Adjust Fov"
+	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section4Gui.Button13Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
+end)
+
 MainGui.MainMiddleButtons.Section2Gui.Button5Background.Text1.MouseEnter:Connect(function()
 	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button5Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=1}):Play()
 	wait(0.3)
-	MainGui.MainMiddleButtons.Section2Gui.Button5Background.Text2.Text="Render trough walls"
+	MainGui.MainMiddleButtons.Section2Gui.Button5Background.Text2.Text="Lines"
 	game:GetService("TweenService"):Create(MainGui.MainMiddleButtons.Section2Gui.Button5Background.Text2,TweenInfo.new(0.1,Enum.EasingStyle.Linear),{TextTransparency=0.8}):Play()
 end)
 MainGui.MainMiddleButtons.Section2Gui.Button5Background.Text1.MouseLeave:Connect(function()
@@ -6306,15 +7430,65 @@ local ButtonSettings3Text = TestGui.MainBackgroundFrame.Instances.ButtonsSetting
 local ButtonSettings4 = TestGui.MainBackgroundFrame.Instances.ButtonsSettings4Value
 local ButtonSettings4Text = TestGui.MainBackgroundFrame.Instances.ButtonsSettings4TextValue
 
+local ButtonSettings5 = TestGui.MainBackgroundFrame.Instances.ButtonsSettings5Value
+local ButtonSettings5Text = TestGui.MainBackgroundFrame.Instances.ButtonsSettings5TextValue
+
+local ButtonSettings6 = TestGui.MainBackgroundFrame.Instances.ButtonsSettings6Value
+local ButtonSettings6Text = TestGui.MainBackgroundFrame.Instances.ButtonsSettings6TextValue
+
+local ButtonSettings7 = TestGui.MainBackgroundFrame.Instances.ButtonsSettings7Value
+local ButtonSettings7Text = TestGui.MainBackgroundFrame.Instances.ButtonsSettings7TextValue
+
+
+	local UserInputService = game:GetService("UserInputService")
+	local Gui2 = MainGui.Parent.ColorPicker.ColorPicker
+
+	local gui2 = Gui2
+
+	local dragging2
+	local dragInput2
+	local dragStart2
+	local startPos2
+
+	local function update2(input)
+		local delta = input.Position - dragStart2
+		gui2.Position = UDim2.new(startPos2.X.Scale, startPos2.X.Offset + delta.X, startPos2.Y.Scale, startPos2.Y.Offset + delta.Y)
+	end
+
+	gui2.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging2 = true
+			dragStart2 = input.Position
+			startPos2 = gui2.Position
+
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging2 = false
+				end
+			end)
+		end
+	end)
+
+	gui2.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput2 = input
+		end
+	end)
+
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput2 and dragging2 then
+			update2(input)
+		end
+	end)
 
 
 
-local function LDTZWMY_fake_script() -- Slider3.Script1 
+-- Slider3.Script1 
 	local Mouse = game.Players.LocalPlayer:GetMouse()
-	local Slider = Slider3
-	local Fill = Fill1
-	local Trigger = TriggerFov
-	local TextNumbers = Numbers
+	local Slider = TestGui.MainBackgroundFrame.DownGui.ButtonsListOfSettings.Button1Settings5.Slider1
+	local Fill = TestGui.MainBackgroundFrame.DownGui.ButtonsListOfSettings.Button1Settings5.Slider1.Fill2
+local Trigger = TestGui.MainBackgroundFrame.DownGui.ButtonsListOfSettings.Button1Settings5.Slider1.TriggerSmoothing
+	local TextNumbers = TestGui.MainBackgroundFrame.DownGui.ButtonsListOfSettings.Button1Settings5.Numbers
 
 	local maxvalue = 7 or 700/700
 	local startingvalue = 0 or 0/100
@@ -6357,11 +7531,66 @@ local function LDTZWMY_fake_script() -- Slider3.Script1
 			SliderActive = false
 		end
 	end)
-end
 --i hate transparency....................
+--[[while wait(1.1) do 
+	if Configs.HitboxExtender.Enabled == true then
+		for i,v in next, game:GetService('Players'):GetPlayers() do
+			if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+				pcall(function()
+					if Configs.HitboxExtender.Teamcheck == true then 
+						if v.Team ~= player.Team then 
+							--v.Character[Configs.HitboxExtender.HitboxPart].Size = Vector3.new(HitboxSize.Text,HitboxSize.Text,HitboxSize.Text)
+							--v.Character[Configs.HitboxExtender.HitboxPart].Transparency = Transparency.Text
+							v.Character[Configs.HitboxExtender.HitboxPart].Material = Configs.HitboxExtender.Material
+							v.Character[Configs.HitboxExtender.HitboxPart].CanCollide = false
+							if Configs.HitboxExtender.TeamColor == true then
+								v.Character[Configs.HitboxExtender.HitboxPart].Color = v.TeamColor.Color
+							else
+								v.Character[Configs.HitboxExtender.HitboxPart].Color = Configs.HitboxExtender.HitboxColor
+							end
+						elseif v.Team == player.Team then
+							v.Character[Configs.HitboxExtender.HitboxPart].Size = Vector3.new(2, 2, 1)
+							v.Character[Configs.HitboxExtender.HitboxPart].Transparency = 1
+							v.Character[Configs.HitboxExtender.HitboxPart].Color = Color3.fromRGB(255, 255, 255)
+						end
+					else
+						--v.Character[Configs.HitboxExtender.HitboxPart].Size = Vector3.new(HitboxSize.Text,HitboxSize.Text,HitboxSize.Text)
+						--v.Character[Configs.HitboxExtender.HitboxPart].Transparency = Transparency.Text
+						if Configs.HitboxExtender.TeamColor == true then
+							v.Character[Configs.HitboxExtender.HitboxPart].Color = v.TeamColor.Color
+						else
+							v.Character[Configs.HitboxExtender.HitboxPart].Color = Color3.new(Color_R.Text,Color_G.Text,Color_B.Text)
+						end
+						v.Character[Configs.HitboxExtender.HitboxPart].Material = Configs.HitboxExtender.Material
+						v.Character[Configs.HitboxExtender.HitboxPart].CanCollide = false
+					end
+				end)
+			end
+		end
+	else
+		for i,v in next, game:GetService('Players'):GetPlayers() do
+			if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+				pcall(function()
+					v.Character[HitboxExtender.HitboxPart].Size = Vector3.new(2, 2, 1)
+					v.Character[HitboxExtender.HitboxPart].Transparency = 1
+					v.Character[HitboxExtender.HitboxPart].Color = Color3.fromRGB(255, 255, 255)
+				end)
+			end
+		end
+	end
+end--]]
+
+
+
+
+
+
+
+
+
 while true do
 	wait(0.01)
-	for i,plr in pairs(game.Players:GetChildren()) do
+	--[[for i,plr in pairs(game.Players:GetChildren()) do
 		AddHighlight(plr)
 		AddBox(plr)
 		AddTracers(plr)
@@ -6371,7 +7600,7 @@ while true do
 		AddHighlight(plr)
 		AddBox(plr)
 		AddTracers(plr)
-	end)
+	end)--]]
 	ButtonSettings1.Value =  ButtonSettings1.ButtonsSettings1TextLabel.BackgroundTransparency
 	ButtonSettings1Text.Value = ButtonSettings1Text.ButtonsSettings1TextLabel1.BackgroundTransparency
 	ButtonSettings2.Value =  ButtonSettings2.ButtonsSettings2TextLabel.BackgroundTransparency
@@ -6454,4 +7683,34 @@ while true do
 	MainGui.DownGui.ButtonsListOfSettings.Button4Settings2.Button1.BackgroundTransparency = ButtonSettings4.Value
 	MainGui.DownGui.ButtonsListOfSettings.Button4Settings2.Text1.TextTransparency = ButtonSettings4.Value
 	MainGui.DownGui.ButtonsListOfSettings.Button4Settings2.Text2.TextTransparency = ButtonSettings4Text.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button4Settings3.BackgroundTransparency = ButtonSettings4.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button4Settings3.Button1.BackgroundTransparency = ButtonSettings4.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button4Settings3.Button1.ImageButton1.ImageTransparency = ButtonSettings4.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button4Settings3.Button1.ImageButton2.ImageTransparency = ButtonSettings4.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button4Settings3.Text1.TextTransparency = ButtonSettings4.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button4Settings3.Text2.TextTransparency = ButtonSettings4Text.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button4Settings4.BackgroundTransparency = ButtonSettings4.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button4Settings4.Button1.BackgroundTransparency = ButtonSettings4.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button4Settings4.Button1.ImageButton1.ImageTransparency = ButtonSettings4.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button4Settings4.Button1.ImageButton2.ImageTransparency = ButtonSettings4.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button4Settings4.Text1.TextTransparency = ButtonSettings4.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button4Settings4.Text2.TextTransparency = ButtonSettings4Text.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button5Settings1.BackgroundTransparency = ButtonSettings4.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button5Settings1.Button1.BackgroundTransparency = ButtonSettings5.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button5Settings1.Button1.ImageButton1.ImageTransparency = ButtonSettings5.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button5Settings1.Button1.ImageButton2.ImageTransparency = ButtonSettings5.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button5Settings1.Text1.TextTransparency = ButtonSettings5.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button5Settings1.Text2.TextTransparency = ButtonSettings5Text.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button6Settings1.BackgroundTransparency = ButtonSettings6.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button6Settings1.Button1.BackgroundTransparency = ButtonSettings6.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button6Settings1.Button1.ImageButton1.ImageTransparency = ButtonSettings6.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button6Settings1.Button1.ImageButton2.ImageTransparency = ButtonSettings6.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button6Settings1.Text1.TextTransparency = ButtonSettings6.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button6Settings1.Text2.TextTransparency = ButtonSettings6Text.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button7Settings1.BackgroundTransparency = ButtonSettings7.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button7Settings1.Button1.BackgroundTransparency = ButtonSettings7.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button7Settings1.Button1.ImageButton1.ImageTransparency = ButtonSettings7.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button7Settings1.Button1.ImageButton2.ImageTransparency = ButtonSettings7.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button7Settings1.Text1.TextTransparency = ButtonSettings7.Value
+	MainGui.DownGui.ButtonsListOfSettings.Button7Settings1.Text2.TextTransparency = ButtonSettings7Text.Value
 end
